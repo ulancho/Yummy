@@ -7,7 +7,7 @@ class MainSections extends CI_Controller
     public function __construct()
     {
         parent::__construct();
-//        $this->load->model('AdminModels');
+        $this->load->model('AdminModels');
         $this->load->library('session');
         $this->load->library('pagination');
         $this->load->helper('url');
@@ -54,18 +54,17 @@ class MainSections extends CI_Controller
     public function addBox()
     {
 
-        $this->form_validation->set_rules('name', 'First Name', 'required|trim|max_length[60]',
+        $this->form_validation->set_rules('name', 'First Name', 'required|trim|max_length[100]',
             array('required' => 'Заполните название.',
-                'max_length' => 'Должно содержать не больше 60 символов.'
+                'max_length' => 'Должно содержать не больше 100 символов.'
             )
         );
         $this->form_validation->set_rules('price', 'Last Name', 'required|trim',
             array('required' => 'Заполните цену.')
         );
 
-        $this->form_validation->set_rules('text', 'role', 'required|trim|max_length[220]',
+        $this->form_validation->set_rules('weight', 'role', 'required|trim',
             array('required' => 'Заполните.',
-                'max_length' => 'Должно содержать не больше 220 символов.'
             )
         );
 
@@ -77,18 +76,18 @@ class MainSections extends CI_Controller
             $this->load->view('admin/addBox');
             $this->load->view('admin/footer');
         } else {
-            print_r($_POST);
-            die();
             $array['name'] = $this->input->post('name');
+            $array['weight'] = $this->input->post('weight');
             $array['price'] = $this->input->post('price');
-            $array['text'] = $this->input->post('text');
-            $array['section'] = $this->input->post('section');
-            $location = 'sport-pit';
+            $location = 'main';
             $imgname = 'photo';
             $ph = $this->do_upload($location, $imgname);
             if (isset($ph['upload_data'])) {
                 $array['imgname'] = $ph['upload_data']['file_name'];
-                if (!$this->AdminModels->addpit($array)) {
+                $addBox = $this->AdminModels->addBox($array);
+                print_r($addBox);
+                // получить insert id и добавить
+                if (!$addBox) {
                     $this->session->set_flashdata('flash_message', 'Не удалось добавить данные!');
                 } else {
                     $this->session->set_flashdata('success_message', 'Данные успешно добавлены.');

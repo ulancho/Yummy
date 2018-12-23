@@ -3,7 +3,7 @@
         <div class="productList flex">
             <div class="productItem">
                 <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/prod1.png" alt="">
+                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
                     <h3>Собери свою</h3>
                     <a href="#" class="productItemBtn">Заказать</a>
                 </div>
@@ -20,7 +20,7 @@
             </div>
             <div class="productItem">
                 <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/prod1.png" alt="">
+                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
                     <h3>Собери свою</h3>
                     <a href="#" class="productItemBtn">Заказать</a>
                 </div>
@@ -37,7 +37,7 @@
             </div>
             <div class="productItem">
                 <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/prod1.png" alt="">
+                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
                     <h3>Собери свою</h3>
                     <a href="#" class="productItemBtn">Заказать</a>
                 </div>
@@ -54,7 +54,7 @@
             </div>
             <div class="productItem">
                 <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/prod1.png" alt="">
+                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
                     <h3>Собери свою</h3>
                     <a href="#" class="productItemBtn">Заказать</a>
                 </div>
@@ -71,7 +71,7 @@
             </div>
             <div class="productItem">
                 <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/prod1.png" alt="">
+                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
                     <h3>Собери свою</h3>
                     <a href="#" class="productItemBtn">Заказать</a>
                 </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="productItem">
                 <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/prod1.png" alt="">
+                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
                     <h3>Собери свою</h3>
                     <a href="#" class="productItemBtn">Заказать</a>
                 </div>
