@@ -56,11 +56,13 @@
         <span></span>
     </a>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="<?=base_url()?>public/slick/slick.js"></script>
-<script async defer	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmOPD3DvI4xloaqfg0DOgY9ONlgisziT4&callback=initMap"></script>
-<script src="<?=base_url()?>public/js/common.js"></script>
-<script src="<?=base_url()?>public/js/parallax.min.js"></script>
+<script  src="<?=base_url()?>public/js/jquery.min.js"></script>
+<script  src="<?=base_url()?>public/slick/slick.js"></script>
+<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmOPD3DvI4xloaqfg0DOgY9ONlgisziT4&callback=initMap"></script>
+<script  src="<?=base_url()?>public/js/common.js"></script>
+<script  src="<?=base_url()?>public/js/parallax.min.js"></script>
+<script  src="<?=base_url()?>public/js/jquery.maskedinput.min.js"></script>
+<script  src="<?=base_url()?>public/js/my.js"></script>
 <script>
     var logoParallax = document.getElementById('logoParallax');
     var parallax = new Parallax(logoParallax);

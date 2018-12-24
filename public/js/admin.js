@@ -11,7 +11,7 @@ $('.plus').on('click', function () {
     form.append(nameInput);
     i++;
 });
-
+    // удаление поля
     $('body').on('click', '.delete-inp', function () {
        let prev =  $(this).prev();
         prev.remove();

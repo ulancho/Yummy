@@ -85,21 +85,30 @@ class MainSections extends CI_Controller
             if (isset($ph['upload_data'])) {
                 $array['imgname'] = $ph['upload_data']['file_name'];
                 $addBox = $this->AdminModels->addBox($array);
-                print_r($addBox);
+
+                $child=array();
+                for($i=0;count($_POST['composition'])>$i;$i++ ){
+                    $child[]=array(
+                        'title' =>$_POST['composition'][$i],
+                        'box_id' => $addBox
+                    );
+                }
+                $this->AdminModels->add_box_composition($child);
+
                 // получить insert id и добавить
                 if (!$addBox) {
                     $this->session->set_flashdata('flash_message', 'Не удалось добавить данные!');
                 } else {
                     $this->session->set_flashdata('success_message', 'Данные успешно добавлены.');
                 }
-                redirect(site_url() . 'admin/MainSections/addSportpit');
+                redirect(site_url() . 'admin/MainSections/addBox');
 
             } else {
                 $array['imgerror'] = $ph['error'];
                 $this->load->view('admin/header');
                 $this->load->view('admin/navbar', $array);
                 $this->load->view('admin/container');
-                $this->load->view('admin/addSportpit');
+                $this->load->view('admin/addBox');
                 $this->load->view('admin/footer');
             }
 
@@ -115,41 +124,48 @@ class MainSections extends CI_Controller
         die();
     }
 
-
-
-    // для загрузки всех спорт питаний
-    public function allsportpit()
+    // для загрузки всех коробок
+    public function allBox()
     {
-        $config['base_url'] = base_url() . 'admin/MainSections/allsportpit/';
-        $config['total_rows'] = $this->db->count_all('spo');
+        $config['base_url'] = base_url() . 'admin/MainSections/allBox/';
+        $config['total_rows'] = $this->db->count_all('box');
         $config['per_page'] = 10;
         $config['full_tag_open'] = '<p class="pag">';
         $config['full_tag_close'] = '</p>';
         $this->pagination->initialize($config);
-        $table = 'spo';
+        $table = 'box';
         $data['sportpits'] = $this->AdminModels->selectAll($table, $config['per_page'], $this->uri->segment(4));
 
         $this->load->view('admin/header');
         $this->load->view('admin/navbar');
         $this->load->view('admin/container');
-        $this->load->view('admin/allsportpit', $data);
+        $this->load->view('admin/allBox', $data);
         $this->load->view('admin/footer');
     }
 
-    // для удаление одного спорт питания
-    public function deletesportpit($id)
+    // для удаление одной коробки
+    public function deleteBox($id)
     {
-        $table = 'spo';
-        $puth = 'sport-pit';
+        $table = 'box';
+        $puth = 'main';
         $result = $this->AdminModels->deleteOne($table, $id,$puth);
+            $tables = 'box_composition';
+            $this->db->where('id_box', $id);
+            $this->db->delete($tables);
         if ($result == FALSE) {
             $this->session->set_flashdata('flash_message', 'Упс! Произошла ошибка');
         } else {
             $this->session->set_flashdata('success_message', 'Успешно удален!');
 
         }
-        redirect(site_url() . 'admin/MainSections/allsportpit');
+        redirect(site_url() . 'admin/MainSections/allBox');
     }
+
+
+
+
+
+
 
     // для загрузки станички  редактирования
     public function updateSp($id)

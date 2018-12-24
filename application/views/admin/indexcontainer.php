@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <a href="<?=base_url()?>admin/MainSections/box">
+        <a href="<?=base_url()?>admin/MainSections/allBox">
         <div class="col-md-3">
             <div class="card-counter primary">
                 <i class="fa fa-code-fork"></i>

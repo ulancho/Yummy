@@ -11,6 +11,7 @@
 </head>
 <body>
 <header class="head">
+    <input id="url" type="hidden" value="<?=base_url()?>">
     <div class="wrapper clearfix">
         <div class="wrappHeadMenu">
             <div class="headContacts clearfix">
@@ -47,10 +48,13 @@
             </div>
         </div>
         <div class="feedback">
-            <form action="">
+            <form action="javascript:void(0)">
+                <div class="modal"></div>
+                <p class="error">Заполните</p>
+                <p class="ok">Ваша заявка успешно отправлена!!!</p>
                 <div class="wrapFormInput clearfix">
-                    <input type="text" required placeholder="Введите Ваш телефон">
-                    <button>Попробовать</button>
+                    <input id="call" type="text" name="call" class="call" placeholder="Введите Ваш телефон" required>
+                    <button class="add_request">Попробовать</button>
                 </div>
             </form>
             <p>Мы перезвоним через несколько минут! :)</p>
