@@ -1,4 +1,12 @@
-
+<div class="basket-count">
+    <a href="<?=base_url()?>main/cart">
+    <div class="basket-count-content">
+        <div id="total total-cart-count" class="count badge">
+            <div id="common-amount">0</div>
+        </div>
+    </div>
+    </a>
+</div>
 <footer>
     <h2>как с нами связаться:</h2>
     <div class="wrapper clearfix flex">
@@ -57,12 +65,14 @@
     </a>
 </div>
 <script  src="<?=base_url()?>public/js/jquery.min.js"></script>
+<script  src="<?=base_url()?>public/js/underscore.min.js"></script>
 <script  src="<?=base_url()?>public/slick/slick.js"></script>
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmOPD3DvI4xloaqfg0DOgY9ONlgisziT4&callback=initMap"></script>
 <script  src="<?=base_url()?>public/js/common.js"></script>
 <script  src="<?=base_url()?>public/js/parallax.min.js"></script>
 <script  src="<?=base_url()?>public/js/jquery.maskedinput.min.js"></script>
 <script  src="<?=base_url()?>public/js/my.js"></script>
+<script  src="<?=base_url()?>public/js/cart.js"></script>
 <script>
     var logoParallax = document.getElementById('logoParallax');
     var parallax = new Parallax(logoParallax);

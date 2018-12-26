@@ -44,7 +44,7 @@ class AdminModels extends CI_Model
         $sql = "SELECT * FROM $tablename WHERE id = ?";
         $query = $this->db->query($sql, array($id));
         if ($query) {
-            return $query->row();
+            return $query->result();
         } else {
             return false;
         }
@@ -60,7 +60,7 @@ class AdminModels extends CI_Model
     public function deleteOne($table, $id, $puth = '')
     {
         $con = $this->getId($table, $id);
-        $name = $con->img_name;
+        $name = $con[0]->img_name;
         $this->db->where('id', $id);
         $this->db->delete($table);
         if ($this->db->affected_rows() == '1') {
@@ -69,5 +69,9 @@ class AdminModels extends CI_Model
         } else {
             return FAlSE;
         }
+    }
+
+    public function select(){
+        $query = $this->db->query('SELECT * FROM box');
     }
 }

@@ -1,109 +1,41 @@
+<?php
+//        echo "<pre>";
+//        print_r($composition);
+//        echo "</pre>";
+
+
+?>
 <section class="product">
     <div class="wrapper">
-        <div class="productList flex">
-            <div class="productItem">
-                <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
-                    <h3>Собери свою</h3>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-                <div class="productItemBack">
-                    <div class="productItemBackContent">
-                        <h3>Собери свою</h3>
-                        <span>Большая коробка с экзотикой, сезонными фруктами, ягодами и халвой.</span>
-                        <p>Дыня Гайя, ананас Пхукет, маракуйя, лонган, рамбутан, манго, гранадилла, гранат, мандарины, медовая хурма, виноград Томпсон, голубика, халва с какао и с ванилью.</p>
-                        <div class="weight">6 кг</div>
-                        <div class="price">4000 Сом</div>
-                    </div>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-            </div>
-            <div class="productItem">
-                <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
-                    <h3>Собери свою</h3>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-                <div class="productItemBack">
-                    <div class="productItemBackContent">
-                        <h3>Собери свою</h3>
-                        <span>Большая коробка с экзотикой, сезонными фруктами, ягодами и халвой.</span>
-                        <p>Дыня Гайя, ананас Пхукет, маракуйя, лонган, рамбутан, манго, гранадилла, гранат, мандарины, медовая хурма, виноград Томпсон, голубика, халва с какао и с ванилью.</p>
-                        <div class="weight">6 кг</div>
-                        <div class="price">4000 Сом</div>
-                    </div>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-            </div>
-            <div class="productItem">
-                <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
-                    <h3>Собери свою</h3>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-                <div class="productItemBack">
-                    <div class="productItemBackContent">
-                        <h3>Собери свою</h3>
-                        <span>Большая коробка с экзотикой, сезонными фруктами, ягодами и халвой.</span>
-                        <p>Дыня Гайя, ананас Пхукет, маракуйя, лонган, рамбутан, манго, гранадилла, гранат, мандарины, медовая хурма, виноград Томпсон, голубика, халва с какао и с ванилью.</p>
-                        <div class="weight">6 кг</div>
-                        <div class="price">4000 Сом</div>
-                    </div>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-            </div>
-            <div class="productItem">
-                <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
-                    <h3>Собери свою</h3>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-                <div class="productItemBack">
-                    <div class="productItemBackContent">
-                        <h3>Собери свою</h3>
-                        <span>Большая коробка с экзотикой, сезонными фруктами, ягодами и халвой.</span>
-                        <p>Дыня Гайя, ананас Пхукет, маракуйя, лонган, рамбутан, манго, гранадилла, гранат, мандарины, медовая хурма, виноград Томпсон, голубика, халва с какао и с ванилью.</p>
-                        <div class="weight">6 кг</div>
-                        <div class="price">4000 Сом</div>
-                    </div>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-            </div>
-            <div class="productItem">
-                <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
-                    <h3>Собери свою</h3>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-                <div class="productItemBack">
-                    <div class="productItemBackContent">
-                        <h3>Собери свою</h3>
-                        <span>Большая коробка с экзотикой, сезонными фруктами, ягодами и халвой.</span>
-                        <p>Дыня Гайя, ананас Пхукет, маракуйя, лонган, рамбутан, манго, гранадилла, гранат, мандарины, медовая хурма, виноград Томпсон, голубика, халва с какао и с ванилью.</p>
-                        <div class="weight">6 кг</div>
-                        <div class="price">4000 Сом</div>
-                    </div>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-            </div>
-            <div class="productItem">
-                <div class="productItemFront">
-                    <img src="<?=base_url()?>public/images/main/prod1.png" alt="">
-                    <h3>Собери свою</h3>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-                <div class="productItemBack">
-                    <div class="productItemBackContent">
-                        <h3>Собери свою</h3>
-                        <span>Большая коробка с экзотикой, сезонными фруктами, ягодами и халвой.</span>
-                        <p>Дыня Гайя, ананас Пхукет, маракуйя, лонган, рамбутан, манго, гранадилла, гранат, мандарины, медовая хурма, виноград Томпсон, голубика, халва с какао и с ванилью.</p>
-                        <div class="weight">6 кг</div>
-                        <div class="price">4000 Сом</div>
-                    </div>
-                    <a href="#" class="productItemBtn">Заказать</a>
-                </div>
-            </div>
-        </div>
+      <div class="productList flex">
+          <?php
+          foreach ($box as $box):?>
+
+              <div class="productItem">
+                  <div class="productItemFront">
+                      <img src="<?=base_url()?>public/images/main/<?php echo $box['img_name'];?>" alt="">
+                      <h3><?php echo $box['title'];?></h3>
+                      <a href="#" class="productItemBtn">Заказать</a>
+                  </div>
+                  <div class="productItemBack">
+                      <div class="productItemBackContent">
+
+                          <p style="display: none;">Цена: <span id='one-good-<?=$box['id']?>'><?=$box['price']?></span></p>
+
+                          <h3><?php echo $box['title'];?></h3>
+                          <?php $i=0;
+                          foreach ($composition[$i] as $box_composition):?>
+                              <p><?php echo $box_composition['title'];?></p>
+                          <?php  endforeach; $i++;?>
+
+                          <div class="weight"><?php echo $box['weight'];?> кг</div>
+                          <div class="price"><?php echo $box['price'];?> сом</div>
+                      </div>
+                      <a href="javascript:void(0)" onclick="goods.insert_good(this)" data-id="<?php echo $box['id'];?>" data-name="<?php echo $box['title'];?>" data-price="<?php echo $box['price'];?>" class="productItemBtn">Заказать</a>
+                  </div>
+              </div>
+          <?php endforeach;?>
+       </div>
     </div>
 </section>
 <section class="advantages">
@@ -127,10 +59,12 @@
         <p class="pseudo-bold">Для осуществления доставки в день заказа оформить заказ нужно до 15 часов.<br>
             Для доставки на следующий день оформить заказ нужно до 21 часа.</p>
         <div class="feedback">
-            <form action="">
+            <form action="javascript:void(0)">
+                <p class="error_index error">Заполните</p>
+                <p class="ok_index ok">Ваша заявка успешно отправлена!!!</p>
                 <div class="wrapFormInput clearfix">
-                    <input type="text" required="" placeholder="Введите Ваш телефон">
-                    <button>Попробовать</button>
+                    <input id="call_index" class="call" type="text" required="" placeholder="Введите Ваш телефон">
+                    <button class="add_request" data-attr="index">Попробовать</button>
                 </div>
             </form>
             <p>Мы перезвоним через несколько минут! :)</p>
@@ -231,3 +165,4 @@
         </div>
     </div>
 </section>
+

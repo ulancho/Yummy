@@ -9,9 +9,10 @@ class Main extends CI_Controller {
         $this->load->library('email');
         $this->load->helper('html');
         $this->load->model('AdminModels');
+        $this->load->database();
     }
     // отправка на почту
-    private function send_mail($phone){
+    private function send_mail($phone,$name='',$addres=''){
         $config['protocol']    = 'smtp';
         $config['smtp_host']    = 'ssl://smtp.googlemail.com';
         $config['smtp_port']    = '465';
@@ -27,7 +28,12 @@ class Main extends CI_Controller {
         $this->email->to('ulan.four@gmail.com');
 
         $this->email->subject('Заявка');
-        $this->email->message('Телефон:' .$phone);
+        if ($name=='' && $addres=''){
+            $this->email->message('Телефон:' .$phone);
+        }
+        else{
+            $this->email->message('Телефон:' .$phone. '<br>ИМЯ:'.$name. '<br>Адресс:' .$addres);
+        }
         $this->email->send();
 //        if (!$this->email->send()) {
 //            show_error($this->email->print_debugger()); }
@@ -36,13 +42,52 @@ class Main extends CI_Controller {
 //        }
     }
 
+    public function getBox() {
 
+        $box = [];
+        $querys = $this->db->query('SELECT * FROM box');
+        foreach ($querys->result_array() as $row) {
+            $box[] = $row;
+        }
+
+        return $box;
+    }
+    public function getBoxComposition($id_box) {
+        $box_composition = [];
+        $query = $this->db->query("SELECT * FROM box_composition WHERE id_box = $id_box");
+        foreach ($query->result_array() as $row) {
+            $box_composition[] = $row;
+        }
+
+        return $box_composition;
+    }
     public function index()
     {
-//        $table = ''
-//        $data['box'] = $this->AdminModels->selectAll($table);
+        $arr = $this->getBox();
+        foreach ($arr as $id){
+            $arra[] = $this->getBoxComposition($id['id']);
+        }
+        $data['box'] = $arr;
+        $data['composition'] = $arra;
+//        echo "<pre>";
+//        print_r($data);
+//        echo "</pre>";
+//        die();
         $this->load->view('main/header');
-        $this->load->view('main/index');
+        $this->load->view('main/index',$data);
+        $this->load->view('main/footer');
+    }
+
+    public function cart(){
+
+        $arr = $this->getBox();
+        foreach ($arr as $id){
+            $data['composition'][] = $this->getBoxComposition($id['id']);
+        }
+        $data['box'] = $arr;
+
+        $this->load->view('main/header');
+        $this->load->view('main/cart', $data);
         $this->load->view('main/footer');
     }
 
@@ -59,4 +104,5 @@ class Main extends CI_Controller {
         }
         echo json_encode($massiv);
     }
+
 }

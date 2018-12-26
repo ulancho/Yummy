@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?=base_url()?>public/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/slick/slick-theme.css">
     <link rel="stylesheet" href="<?=base_url()?>public/css/style.css">
+    <link rel="stylesheet" href="<?=base_url()?>public/css/bootstrap.min.css">
     <title>Yummy fruit</title>
 </head>
 <body>
@@ -50,11 +51,11 @@
         <div class="feedback">
             <form action="javascript:void(0)">
                 <div class="modal"></div>
-                <p class="error">Заполните</p>
-                <p class="ok">Ваша заявка успешно отправлена!!!</p>
+                <p class="error_head error">Заполните</p>
+                <p class="ok_head ok">Ваша заявка успешно отправлена!!!</p>
                 <div class="wrapFormInput clearfix">
-                    <input id="call" type="text" name="call" class="call" placeholder="Введите Ваш телефон" required>
-                    <button class="add_request">Попробовать</button>
+                    <input id="call_head" type="text" name="call" class="call" placeholder="Введите Ваш телефон" required>
+                    <button class="add_request" data-attr="head">Попробовать</button>
                 </div>
             </form>
             <p>Мы перезвоним через несколько минут! :)</p>
