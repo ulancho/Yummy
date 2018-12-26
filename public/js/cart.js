@@ -120,7 +120,7 @@ var goods = {
                         "<td>" + exist_goods[i].price + "</td>" +
                         "<td><button onclick='goods.delete_good(this)' data-id='" + id + "' data-name='" + name + "' data-price='" + price + "' type='button' class='btn btn-danger btn-lg remove-from-cart'><span class='glyphicon glyphicon-minus'></span></button></td>" +
                         "<td><button onclick='goods.insert_good(this)' data-id='" + id + "' data-name='" + name + "' data-price='" + price + "' type='button' class='btn btn-success btn-lg insert-to-cart'><span class='glyphicon glyphicon-plus'></span></button></td>"+
-                        "<td><button onclick='goods.set_to_zero(this)' data-id='" + id + "' data-sum-one-good='" + exist_goods[i].price + "' type='button' class='btn btn-primary btn-lg'><span class='glyphicon glyphicon-remove'></span></button></td>" +
+                        "<td><button onclick='goods.set_to_zero(this)' data-id='" + id + "' data-sum-one-good='" + exist_goods[i].price + "' type='button' class='btn btn-primary btn-lg'>x</button></td>" +
                         "</tr>");
                 } else {
                     $("#exist_goods").append("<tr>" +
@@ -129,11 +129,11 @@ var goods = {
                         "<td>" + exist_goods[i].price + "</td>" +
                         "<td><button onclick='goods.delete_good(this)' data-id='" + id + "' data-name='" + name + "' data-price='" + price + "' type='button' class='btn btn-danger btn-lg remove-from-cart'><span class='glyphicon glyphicon-minus'></span></button></td>" +
                         "<td><button onclick='goods.insert_good(this)' data-id='" + id + "' data-name='" + name + "' data-price='" + price + "' type='button' class='btn btn-success btn-lg insert-to-cart'><span class='glyphicon glyphicon-plus'></span></button></td>"+
-                        "<td><button onclick='goods.set_to_zero(this)' data-id='" + id + "' data-sum-one-good='" + exist_goods[i].price + "' type='button' class='btn btn-primary btn-lg'><span class='glyphicon glyphicon-remove'></span></button></td>" +
+                        "<td><button onclick='goods.set_to_zero(this)' data-id='" + id + "' data-sum-one-good='" + exist_goods[i].price + "' type='button' class='btn btn-primary btn-lg'>x</button></td>" +
                         "</tr><h1>Итого: " + this.cart[0].total + "</h1>");
                 }
             }
-            $("#check").html("<button type='button' class='btn btn-danger check-out'><a href='cart.php'>Перейти к оформлению заказа</a></button>");
+            $("#check").html("<button type='button' data-toggle='collapse' data-target='#zakaz' id='check' class='btn btn-default check-out'>Потвердить заказ</button>");
             $("#itogo").html("<h1>Итого: " + this.cart[0].total + "</h1>");
         } else {
             $("#exist_goods").html("<tr><td><h3>Вы ещё не заказали ни одного товара! Заказывайте быстрее!</h3></td></tr>");

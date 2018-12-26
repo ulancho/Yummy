@@ -65,11 +65,11 @@
     </a>
 </div>
 <script  src="<?=base_url()?>public/js/jquery.min.js"></script>
-<script  src="<?=base_url()?>public/js/underscore.min.js"></script>
 <script  src="<?=base_url()?>public/slick/slick.js"></script>
 <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmOPD3DvI4xloaqfg0DOgY9ONlgisziT4&callback=initMap"></script>
 <script  src="<?=base_url()?>public/js/common.js"></script>
 <script  src="<?=base_url()?>public/js/parallax.min.js"></script>
+<script  src="<?=base_url()?>public/js/bootstrap.min.js"></script>
 <script  src="<?=base_url()?>public/js/jquery.maskedinput.min.js"></script>
 <script  src="<?=base_url()?>public/js/my.js"></script>
 <script  src="<?=base_url()?>public/js/cart.js"></script>

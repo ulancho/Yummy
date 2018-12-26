@@ -1,5 +1,6 @@
 $(document).ready(function(){
      $(".call").mask("0(999) 99-99-99");
+    var url = $('#url').val();
 
     $('.add_request').on('click',function () {
         var attr = $(this).data('attr');
@@ -7,7 +8,6 @@ $(document).ready(function(){
         var error = `.error_${attr}`;
         var ok = `.ok_${attr}`;
         var number = $(call).val();
-        var url = $('#url').val();
         $('body').addClass("loading");
         $.ajax({
             method:"POST",
@@ -29,5 +29,32 @@ $(document).ready(function(){
         });
     });
 
+    $('#check').on('click',function () {
+        var total = localStorage.getItem('cart');
+        $("#good").val(total);
+    });
 
 });
+
+function checkOut(context) {
+    var form = $(context)[0];
+    var all_inputs = new FormData(form);
+    var url = $('#url').val();
+    $('body').addClass("loading");
+    $.ajax({
+        method: "POST",
+        url: url+"Main/cart_proc",
+        data: all_inputs,
+        dataType: "JSON",
+         contentType: false,
+         processData: false
+    }).done(function(message) {
+        $('body').removeClass("loading");
+        $("#good").val('');
+        $("#total").val('');
+        localStorage.removeItem("cart");
+        alert('Товары оформлены! Спасибо за покупку!  Ваш заказ составил ' + message.total + ' сомов.');
+        location.reload();
+
+    });
+}

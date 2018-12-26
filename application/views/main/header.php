@@ -26,7 +26,7 @@
             </div>
             <div class="headMenuSocLink clearfix">
                 <ul class="headMenu">
-                    <li class="active"><a href="#">Главная</a></li>
+                    <li class="active"><a href="<?=base_url()?>">Главная</a></li>
                     <li><a href="#">Фрукты</a></li>
                     <li><a href="#">Овощи</a></li>
                     <li><a href="#">Новости</a></li>

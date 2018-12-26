@@ -10,6 +10,16 @@ class AdminModels extends CI_Model
 
     }
 
+    public function getBoxComposition($id_box) {
+        $box_composition = [];
+        $query = $this->db->query("SELECT * FROM box_composition WHERE id_box = $id_box");
+        foreach ($query->result_array() as $row) {
+            $box_composition[] = $row;
+        }
+
+        return $box_composition;
+    }
+
 // добавление box
     public function addBox($d)
     {

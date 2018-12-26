@@ -10,9 +10,10 @@ class Main extends CI_Controller {
         $this->load->helper('html');
         $this->load->model('AdminModels');
         $this->load->database();
+        header('Content-Type: text/html; charset=utf-8');
     }
     // отправка на почту
-    private function send_mail($phone,$name='',$addres=''){
+    private function send_mail($phone,$name='',$addres='' ,$zakaz=''){
         $config['protocol']    = 'smtp';
         $config['smtp_host']    = 'ssl://smtp.googlemail.com';
         $config['smtp_port']    = '465';
@@ -28,18 +29,13 @@ class Main extends CI_Controller {
         $this->email->to('ulan.four@gmail.com');
 
         $this->email->subject('Заявка');
-        if ($name=='' && $addres=''){
+        if ($name=='' && $addres='' && $zakaz=''){
             $this->email->message('Телефон:' .$phone);
         }
         else{
-            $this->email->message('Телефон:' .$phone. '<br>ИМЯ:'.$name. '<br>Адресс:' .$addres);
+            $this->email->message('Телефон:' .$phone. '<br>ИМЯ:'.$name. '<br>Адресс:' .$addres .'<br>заказ:'.$zakaz);
         }
         $this->email->send();
-//        if (!$this->email->send()) {
-//            show_error($this->email->print_debugger()); }
-//        else {
-//            echo 'ok!';
-//        }
     }
 
     public function getBox() {
@@ -52,37 +48,19 @@ class Main extends CI_Controller {
 
         return $box;
     }
-    public function getBoxComposition($id_box) {
-        $box_composition = [];
-        $query = $this->db->query("SELECT * FROM box_composition WHERE id_box = $id_box");
-        foreach ($query->result_array() as $row) {
-            $box_composition[] = $row;
-        }
-
-        return $box_composition;
-    }
     public function index()
     {
         $arr = $this->getBox();
-        foreach ($arr as $id){
-            $arra[] = $this->getBoxComposition($id['id']);
-        }
         $data['box'] = $arr;
-        $data['composition'] = $arra;
-//        echo "<pre>";
-//        print_r($data);
-//        echo "</pre>";
-//        die();
         $this->load->view('main/header');
         $this->load->view('main/index',$data);
         $this->load->view('main/footer');
     }
-
     public function cart(){
 
         $arr = $this->getBox();
         foreach ($arr as $id){
-            $data['composition'][] = $this->getBoxComposition($id['id']);
+            $data['composition'][] = $this->AdminModels->getBoxComposition($id['id']);
         }
         $data['box'] = $arr;
 
@@ -90,7 +68,25 @@ class Main extends CI_Controller {
         $this->load->view('main/cart', $data);
         $this->load->view('main/footer');
     }
+    public function cart_proc(){
+    $name = $this->input->post('name');
+    $phone = $this->input->post('phone');
+    $adress = $this->input->post('adress');
+    $good = $this->input->post('good');
+    $json_decode = json_decode($good);
+    $total = $json_decode[0]->total;
+    $count = count($json_decode)-1;
+        $zakaz = '';
+        for ($i = 1; $i <=$count; $i++) {
+            $zakaz = $zakaz. '№'.$i.'название='.$json_decode[$i]->name.'; количество='.$json_decode[$i]->count.'<br>';
+        }
+        $this->send_mail($phone,$name,$adress,$zakaz);
+        $message = array(
+            'total' => $total,
+        );
+        echo json_encode($message);
 
+    }
     public function add_request(){
        $phone = $this->input->post('number');
         if(empty($phone)){
