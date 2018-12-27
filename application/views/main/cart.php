@@ -49,13 +49,9 @@ foreach ($box as $box):?>
 
         </tbody>
     </table>
-    <div id="itogo">
-
-    </div>
-    <div id="check">
-
-    </div>
 </div>
+<div id="itogo"></div>
+<div id="check"></div>
     <div id="zakaz" class="collapse">
         <form action="javascript:void(0)" onsubmit="checkOut(this)">
             <input type="hidden" id="good" name="good" class="form-control">

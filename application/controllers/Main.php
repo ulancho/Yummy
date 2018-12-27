@@ -14,8 +14,8 @@ class Main extends CI_Controller {
     }
     // отправка на почту
     private function send_mail($phone,$name='',$addres='' ,$zakaz=''){
-        $config['protocol']    = 'smtp';
-        $config['smtp_host']    = 'ssl://smtp.googlemail.com';
+        $config['protocol']    = 'ssmtp';
+        $config['smtp_host']    = 'ssl://ssmtp.gmail.com';
         $config['smtp_port']    = '465';
         $config['smtp_timeout'] = '7';
         $config['smtp_user']    = 'academybishkek@gmail.com';
@@ -35,7 +35,12 @@ class Main extends CI_Controller {
         else{
             $this->email->message('Телефон:' .$phone. '<br>ИМЯ:'.$name. '<br>Адресс:' .$addres .'<br>заказ:'.$zakaz);
         }
-        $this->email->send();
+        
+        if (!$this->email->send()) {
+            show_error($this->email->print_debugger()); }
+        else {
+            echo 'ok!';
+        }
     }
 
     public function getBox() {
@@ -52,7 +57,8 @@ class Main extends CI_Controller {
     {
         $arr = $this->getBox();
         $data['box'] = $arr;
-        $this->load->view('main/header');
+        $data['noHomePage'] = 'm';
+        $this->load->view('main/header',$data);
         $this->load->view('main/index',$data);
         $this->load->view('main/footer');
     }
@@ -63,9 +69,9 @@ class Main extends CI_Controller {
             $data['composition'][] = $this->AdminModels->getBoxComposition($id['id']);
         }
         $data['box'] = $arr;
-
-        $this->load->view('main/header');
-        $this->load->view('main/cart', $data);
+        $data['noHomePage'] = 'noHomePage';
+        $this->load->view('main/header',$data);
+        $this->load->view('main/cart');
         $this->load->view('main/footer');
     }
     public function cart_proc(){

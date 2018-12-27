@@ -332,6 +332,7 @@ form{
 	padding: 16px 10px;
 	float: left;
 	text-shadow: 0px 0px 0px #000;
+    border-radius: 11px;
 }
 .wrapFormInput button{
 	width: 137px;
@@ -519,6 +520,8 @@ form{
 	transform: rotateY(0deg);
 	transition: all 0.4s;
 	opacity: 1;
+	height: 100%;
+    overflow-y: auto;
 }
 .productItemBackContent{
 	color: #000;
@@ -701,6 +704,7 @@ form{
 	width: 142px;
 	height: 100%;
 	float: left;
+	background: #fff;
 }
 .clipPathBorder{
 	width: 144px;
@@ -854,6 +858,8 @@ footer h2{
 }
 .footerAddress{
 	font-size: 24px;
+	word-wrap:break-word;
+    max-width: 100%;
 }
 .footerPhoneTitle{
 	margin-top: 35px;
@@ -1031,10 +1037,11 @@ footer h2{
 	.footerContacts{
 		width: 100%;
 		text-align: center;
+	    padding: 0;
 	}
 	.footerContacts{
 		margin-top: 25px;
-		min-width: auto;
+		min-width: 100%;
 	}
 	footer{
 		padding-bottom: 20px;
@@ -1059,6 +1066,13 @@ footer h2{
 		padding: 0px;
 		height: 51px;
 		margin: 0px;
+	}
+	.basket-count .count{
+        font-size: 12px;
+	}
+	.basket-count{
+	    width:70px;
+	    height:70px;
 	}
 }
 

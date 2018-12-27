@@ -6,12 +6,12 @@
     <link rel="shortcut icon" type="img/png" href="<?=base_url()?>public/img/faIcon.png">
     <link rel="stylesheet" href="<?=base_url()?>public/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/slick/slick-theme.css">
-    <link rel="stylesheet" href="<?=base_url()?>public/css/style.css">
+    <link rel="stylesheet" href="<?=base_url()?>public/css/style.css?ver=0.0.7">
     <link rel="stylesheet" href="<?=base_url()?>public/css/bootstrap.min.css">
     <title>Yummy fruit</title>
 </head>
 <body>
-<header class="head">
+<header class="head <?=$noHomePage?>">
     <input id="url" type="hidden" value="<?=base_url()?>">
     <div class="wrapper clearfix">
         <div class="wrappHeadMenu">
