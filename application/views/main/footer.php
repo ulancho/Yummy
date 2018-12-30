@@ -7,6 +7,116 @@
     </div>
     </a>
 </div>
+<section class="delivery">
+    <div class="wrapper">
+        <h2>Доставка</h2>
+        <p class="pseudo-bold">Для осуществления доставки в день заказа оформить заказ нужно до 15 часов.<br>
+            Для доставки на следующий день оформить заказ нужно до 21 часа.</p>
+        <div class="feedback">
+            <form action="">
+                <div class="wrapFormInput clearfix">
+                    <input type="text" required="" placeholder="Введите Ваш телефон">
+                    <button>Попробовать</button>
+                </div>
+            </form>
+            <p>Мы перезвоним через несколько минут! :)</p>
+        </div>
+    </div>
+</section>
+<section class="partners">
+    <div class="wrapper">
+        <h2>Партнеры</h2>
+        <p>Компании, в которых наши сотрудники оперативно доставляют<br>
+            потенциальным партнерам доставку на дом, в офис, кафе, рестораны и сети магазинов.
+        </p>
+        <div class="partnersList regular flex">
+            <div class="partnersItem">
+                <img src="<?=base_url()?>public/images/part1.jpg" alt="">
+            </div>
+            <div class="partnersItem">
+                <img src="<?=base_url()?>public/images/part2.jpg" alt="">
+            </div>
+            <div class="partnersItem">
+                <img src="<?=base_url()?>public/images/part3.jpg" alt="">
+            </div>
+            <div class="partnersItem">
+                <img src="<?=base_url()?>public/images/part1.jpg" alt="">
+            </div>
+            <div class="partnersItem">
+                <img src="<?=base_url()?>public/images/part2.jpg" alt="">
+            </div>
+            <div class="partnersItem">
+                <img src="<?=base_url()?>public/images/part3.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="blog">
+    <div class="wrapper">
+        <h2>Блог</h2>
+        <div class="blogList clearfix">
+            <div class="blogListItem clearfix flex">
+                <div class="blogListItemImg">
+                    <div class="clipPathBorder">
+                        <img src="images/blog1.png" alt="">
+                    </div>
+                </div>
+                <div class="blogListItemDes">
+                    <h3>Бесплатная доставка фруктов!</h3>
+                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
+                    <div class="blogListItemDesBtn clearfix">
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blogListItem clearfix">
+                <div class="blogListItemImg">
+                    <div class="clipPathBorder">
+                        <img src="<?=base_url()?>public/images/blog1.png" alt="">
+                    </div>
+                </div>
+                <div class="blogListItemDes">
+                    <h3>Бесплатная доставка фруктов!</h3>
+                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
+                    <div class="blogListItemDesBtn clearfix">
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blogListItem clearfix">
+                <div class="blogListItemImg">
+                    <div class="clipPathBorder">
+                        <img src="<?=base_url()?>public/images/blog1.png" alt="">
+                    </div>
+                </div>
+                <div class="blogListItemDes">
+                    <h3>Бесплатная доставка фруктов!</h3>
+                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
+                    <div class="blogListItemDesBtn clearfix">
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="blogListItem clearfix">
+                <div class="blogListItemImg">
+                    <div class="clipPathBorder">
+                        <img src="<?=base_url()?>public/images/blog1.png" alt="">
+                    </div>
+                </div>
+                <div class="blogListItemDes">
+                    <h3>Бесплатная доставка фруктов!</h3>
+                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
+                    <div class="blogListItemDesBtn clearfix">
+                        <a href="#">Подробнее...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="allBlogBtn">
+            <a href="#">Посмотреть все новости</a>
+        </div>
+    </div>
+</section>
 <footer>
     <h2>как с нами связаться:</h2>
     <div class="wrapper clearfix flex">
@@ -85,6 +195,5 @@
         var marker = new google.maps.Marker({position: uluru, map: map});
     }
 </script>
-
 </body>
 </html>

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="<?=base_url()?>public/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/slick/slick-theme.css">
     <link rel="stylesheet" href="<?=base_url()?>public/css/style.css?ver=0.0.7">
-    <link rel="stylesheet" href="<?=base_url()?>public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?=$bootstrap?>">
     <title>Yummy fruit</title>
 </head>
 <body>
@@ -27,10 +27,10 @@
             <div class="headMenuSocLink clearfix">
                 <ul class="headMenu">
                     <li class="active"><a href="<?=base_url()?>">Главная</a></li>
-                    <li><a href="#">Фрукты</a></li>
-                    <li><a href="#">Овощи</a></li>
-                    <li><a href="#">Новости</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
+                    <li><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
+                    <li><a href="<?=base_url()?>main/news">Новости</a></li>
+                    <li><a href="<?=base_url()?>main/contacts">Контакты</a></li>
                 </ul>
                 <div class="headSocLink clearfix">
                     <ul>

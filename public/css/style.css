@@ -77,7 +77,9 @@ body.loading .modal {
 body.loading .modal {
 	display: block;
 }
-
+.mainfont{
+	font-family: 'StrokeRUSBYLYAJKA-Medium';
+}
 .error, .ok{
 	color: red;
 	display: none;

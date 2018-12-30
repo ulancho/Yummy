@@ -14,19 +14,19 @@ class Main extends CI_Controller {
     }
     // отправка на почту
     private function send_mail($phone,$name='',$addres='' ,$zakaz=''){
-        $config['protocol']    = 'ssmtp';
-        $config['smtp_host']    = 'ssl://ssmtp.gmail.com';
+        $config['protocol']    = 'smtp';
+        $config['smtp_host']    = 'ssl://smtp.googlemail.com';
         $config['smtp_port']    = '465';
         $config['smtp_timeout'] = '7';
-        $config['smtp_user']    = 'academybishkek@gmail.com';
-        $config['smtp_pass']    = 'qwertyuiop6723233333';
+        $config['smtp_user']    = 'yummyfruitkg@gmail.com';
+        $config['smtp_pass']    = '123456ulan';
         $config['charset']    = 'utf-8';
-        $config['newline']    = "\r\n";
+       $config['newline']    = "\r\n";
         $config['mailtype'] = 'html'; //  html
         $config['validation'] = TRUE; // bool whether to validate email or not
         $this->email->initialize($config);
-        $this->email->from('academybishkek@gmail.com', 'Заявки из сайта');
-        $this->email->to('ulan.four@gmail.com');
+        $this->email->from('yummyfruitkg@gmail.com', 'Заявки из сайта');
+        $this->email->to('ulan.five@gmail.com');
 
         $this->email->subject('Заявка');
         if ($name=='' && $addres='' && $zakaz=''){
@@ -35,14 +35,14 @@ class Main extends CI_Controller {
         else{
             $this->email->message('Телефон:' .$phone. '<br>ИМЯ:'.$name. '<br>Адресс:' .$addres .'<br>заказ:'.$zakaz);
         }
-        
-        if (!$this->email->send()) {
-            show_error($this->email->print_debugger()); }
-        else {
-            echo 'ok!';
-        }
+        $this->email->send();
+        //debugger
+//        if (!$this->email->send()) {
+//            show_error($this->email->print_debugger()); }
+//        else {
+//            echo 'ok!';
+//        }
     }
-
     public function getBox() {
 
         $box = [];
@@ -57,18 +57,23 @@ class Main extends CI_Controller {
     {
         $arr = $this->getBox();
         $data['box'] = $arr;
-        $data['noHomePage'] = 'm';
-        $this->load->view('main/header',$data);
+        $arr['noHomePage'] = 'm';
+        $arr['bootstrap'] = '';
+
+        $this->load->view('main/header',$arr);
         $this->load->view('main/index',$data);
         $this->load->view('main/footer');
     }
     public function cart(){
 
+        $url = base_url();
         $arr = $this->getBox();
         foreach ($arr as $id){
             $data['composition'][] = $this->AdminModels->getBoxComposition($id['id']);
         }
+
         $data['box'] = $arr;
+        $data['bootstrap'] = $url."public/css/bootstrap.min.css";
         $data['noHomePage'] = 'noHomePage';
         $this->load->view('main/header',$data);
         $this->load->view('main/cart');
@@ -106,5 +111,33 @@ class Main extends CI_Controller {
         }
         echo json_encode($massiv);
     }
-
+    public function fruits(){
+        $data['noHomePage'] = 'noHomePage';
+        $data['bootstrap'] = '';
+        $this->load->view('main/header',$data);
+        $this->load->view('main/fruits');
+        $this->load->view('main/footer');
+    }
+    public function vegetables(){
+        $data['noHomePage'] = 'noHomePage';
+        $data['bootstrap'] = '';
+        $this->load->view('main/header',$data);
+        $this->load->view('main/fruits');
+        $this->load->view('main/footer');
+    }
+    public function news(){
+        $data['noHomePage'] = 'noHomePage';
+        $data['bootstrap'] = '';
+        $this->load->view('main/header',$data);
+        $this->load->view('main/news');
+        $this->load->view('main/footer');
+    }
+    public function contacts(){
+        $url = base_url();
+        $data['noHomePage'] = 'noHomePage';
+        $data['bootstrap'] = $url."public/css/bootstrap.min.css";
+        $this->load->view('main/header',$data);
+        $this->load->view('main/contacts');
+        $this->load->view('main/footer');
+    }
 }
