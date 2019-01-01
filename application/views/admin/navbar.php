@@ -9,7 +9,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                   </button>
-                  <a class="navbar-brand" href="<?php echo site_url();?>admin/mainAdmin/admin">Yummy Fruit</a>
+                  <a class="navbar-brand" href="<?php echo site_url();?>admin/Admin_page/admin">Yummy Fruit</a>
                 </div>
             
                 <!-- ссылки итд -->

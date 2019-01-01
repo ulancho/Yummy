@@ -50,7 +50,6 @@
         </div>
         <div class="feedback">
             <form action="javascript:void(0)">
-                <div class="modal"></div>
                 <p class="error_head error">Заполните</p>
                 <p class="ok_head ok">Ваша заявка успешно отправлена!!!</p>
                 <div class="wrapFormInput clearfix">
@@ -115,3 +114,4 @@
         </div>
     </div>
 </header>
+<div class="modal"></div>

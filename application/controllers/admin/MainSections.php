@@ -118,10 +118,12 @@ class MainSections extends CI_Controller
     }
 
     public function test(){
-        echo "<pre>";
-        print_r($_POST);
-        echo "</pre>";
+        $table = 'fruits';
+        $id = 6;
+        $result = $this->AdminModels->getid($table, $id);
+        print_r($result);
         die();
+
     }
 
     // для загрузки всех коробок
@@ -159,6 +161,94 @@ class MainSections extends CI_Controller
 
         }
         redirect(site_url() . 'admin/MainSections/allBox');
+    }
+
+    // для загрузки всех фруктов
+    public function allFruits()
+    {
+        $config['base_url'] = base_url() . 'admin/MainSections/allFruits/';
+        $config['total_rows'] = $this->db->count_all('box');
+        $config['per_page'] = 10;
+        $config['full_tag_open'] = '<p class="pag">';
+        $config['full_tag_close'] = '</p>';
+        $this->pagination->initialize($config);
+        $table = 'fruits';
+        $data['fruits'] = $this->AdminModels->selectAll($table, $config['per_page'], $this->uri->segment(4));
+
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/container');
+        $this->load->view('admin/allFruits', $data);
+        $this->load->view('admin/footer');
+    }
+
+    //  для добавления в бд коробки.
+    public function addFruits()
+    {
+
+        $this->form_validation->set_rules('name', 'First Name', 'required|trim|max_length[100]',
+            array('required' => 'Заполните название.',
+                'max_length' => 'Должно содержать не больше 100 символов.'
+            )
+        );
+        $this->form_validation->set_rules('price', 'Last Name', 'required|trim',
+            array('required' => 'Заполните цену.')
+        );
+
+        $this->form_validation->set_rules('weight', 'role', 'required|trim',
+            array('required' => 'Заполните.',
+            )
+        );
+
+        if ($this->form_validation->run() == FALSE) {
+            $array['imgerror'] = '';
+            $this->load->view('admin/header');
+            $this->load->view('admin/navbar', $array);
+            $this->load->view('admin/container');
+            $this->load->view('admin/addFruits');
+            $this->load->view('admin/footer');
+        } else {
+            $array['name'] = $this->input->post('name');
+            $array['weight'] = $this->input->post('weight');
+            $array['price'] = $this->input->post('price');
+            $location = 'fruits';
+            $imgname = 'photo';
+            $ph = $this->do_upload($location, $imgname);
+            if (isset($ph['upload_data'])) {
+                $array['imgname'] = $ph['upload_data']['file_name'];
+                $addBox = $this->AdminModels->addFruits($array);
+                if (!$addBox) {
+                    $this->session->set_flashdata('flash_message', 'Не удалось добавить данные!');
+                } else {
+                    $this->session->set_flashdata('success_message', 'Данные успешно добавлены.');
+                }
+                redirect(site_url() . 'admin/MainSections/addFruits');
+
+            } else {
+                $array['imgerror'] = $ph['error'];
+                $this->load->view('admin/header');
+                $this->load->view('admin/navbar', $array);
+                $this->load->view('admin/container');
+                $this->load->view('admin/addFruits');
+                $this->load->view('admin/footer');
+            }
+
+        }
+
+
+    }
+
+    public function deleteFruits($id){
+        $table = 'fruits';
+        $puth = "fruits";
+        $result = $this->AdminModels->deleteOne($table, $id,$puth);
+        if ($result == FALSE) {
+            $this->session->set_flashdata('flash_message', 'Упс! Произошла ошибка');
+        } else {
+            $this->session->set_flashdata('success_message', 'Успешно удален!');
+
+        }
+        redirect(site_url() . 'admin/MainSections/allFruits');
     }
 
 

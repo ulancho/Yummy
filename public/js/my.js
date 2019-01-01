@@ -58,3 +58,30 @@ function checkOut(context) {
 
     });
 }
+
+function add_cont(context) {
+    var form = $(context)[0];
+    var all_inputs = new FormData(form);
+    var url = $('#url').val();
+    var error = $('.error');
+    var ok = $('.ok');
+    $('body').addClass("loading");
+    $.ajax({
+        method: "POST",
+        url: url+"Main/contactAction",
+        data: all_inputs,
+        dataType: "JSON",
+        contentType: false,
+        processData: false
+    }).done(function(data) {
+        $('body').removeClass("loading");
+        if(data.error == '1'){
+            error.show();
+            ok.hide();
+        }
+        else{
+            error.hide();
+            ok.show();
+        }
+    });
+}

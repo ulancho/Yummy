@@ -114,15 +114,17 @@ class Main extends CI_Controller {
     public function fruits(){
         $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = '';
+        $arr['title'] = 'ФРУКТЫ';
         $this->load->view('main/header',$data);
-        $this->load->view('main/fruits');
+        $this->load->view('main/fruits',$arr);
         $this->load->view('main/footer');
     }
     public function vegetables(){
         $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = '';
+        $arr['title'] = 'ОВОЩИ';
         $this->load->view('main/header',$data);
-        $this->load->view('main/fruits');
+        $this->load->view('main/fruits',$arr);
         $this->load->view('main/footer');
     }
     public function news(){
@@ -139,5 +141,34 @@ class Main extends CI_Controller {
         $this->load->view('main/header',$data);
         $this->load->view('main/contacts');
         $this->load->view('main/footer');
+    }
+    public function contactAction(){
+        $name = $this->input->post('name');
+        $phone = $this->input->post('phone_cont');
+        $comm = $this->input->post('comments');
+        if (empty($name)  || empty($phone) || empty($comm)){
+            $massiv['error'] = '1';
+        }
+        else{
+        $config['protocol']    = 'smtp';
+        $config['smtp_host']    = 'ssl://smtp.googlemail.com';
+        $config['smtp_port']    = '465';
+        $config['smtp_timeout'] = '7';
+        $config['smtp_user']    = 'yummyfruitkg@gmail.com';
+        $config['smtp_pass']    = '123456ulan';
+        $config['charset']    = 'utf-8';
+        $config['newline']    = "\r\n";
+        $config['mailtype'] = 'html'; //  html
+        $config['validation'] = TRUE; // bool whether to validate email or not
+        $this->email->initialize($config);
+        $this->email->from('yummyfruitkg@gmail.com', 'Cообщение из сайта');
+        $this->email->to('ulan.five@gmail.com');
+
+        $this->email->subject('Из сайта');
+        $this->email->message('Телефон:' .$phone. '<br>ИМЯ:'.$name. '<br>Собщ:' .$comm);
+        $this->email->send();
+        $massiv['error'] = '0';
+        }
+        echo json_encode($massiv);
     }
 }

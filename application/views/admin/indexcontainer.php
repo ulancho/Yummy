@@ -9,7 +9,7 @@
             </div>
         </div>
         </a>
-        <a href="<?=base_url()?>admin/MainSections/allsporteq">
+        <a href="<?=base_url()?>admin/MainSections/allFruits">
         <div class="col-md-3">
             <div class="card-counter danger">
                 <i class="fa fa-ticket"></i>

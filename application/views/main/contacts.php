@@ -11,20 +11,26 @@
         </div>
         <div class="col-md-8">
             <div class="row">
+                <form action="javascript:void(0)" method="post" onsubmit="add_cont(this)">
                 <div class="col-sm-6 form-group">
-                    <input class="form-control" id="name" name="name" placeholder="Имя" type="text" required>
+                    <input class="form-control" id="name" name="name" placeholder="Имя" type="text">
                 </div>
                 <div class="col-sm-6 form-group">
-                    <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                    <input class="form-control"  name="phone_cont" placeholder="Номер телефона" type="number">
                 </div>
             </div>
             <textarea class="form-control" id="comments" name="comments" placeholder="Ваше сообщение" rows="5"></textarea>
             <br>
             <div class="row">
-                <div class="col-md-12 form-group">
-                    <button class="btn pull-right" type="submit">Send</button>
+                <div class="col-md-6 form-group">
+                   <p class="error" style="color: red;">Заполните, пожалуйста, все поля</p>
+                   <p class="ok" style="color: green;">Ваше сообщение успешно отправлено</p>
+                </div>
+                <div class="col-md-6 form-group">
+                    <input class="btn btn-default pull-right" type="submit" value="Отправить">
                 </div>
             </div>
+            </form>
         </div>
     </div>
 

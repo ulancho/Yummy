@@ -32,6 +32,18 @@ class AdminModels extends CI_Model
         $this->db->insert('box', $string);
         return $this->db->insert_id();
     }
+    // добавление box
+    public function addFruits($d)
+    {
+        $string = array(
+            'name' => $d['name'],
+            'weight' => $d['weight'],
+            'price' => $d['price'],
+            'imgname' => $d['imgname'],
+        );
+        $this->db->insert('fruits', $string);
+        return $this->db->insert_id();
+    }
     public function add_box_composition($arr){
         for($i=0;count($arr)>$i;$i++ ){
             $child=array(

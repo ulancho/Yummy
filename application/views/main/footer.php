@@ -13,10 +13,12 @@
         <p class="pseudo-bold">Для осуществления доставки в день заказа оформить заказ нужно до 15 часов.<br>
             Для доставки на следующий день оформить заказ нужно до 21 часа.</p>
         <div class="feedback">
-            <form action="">
+            <form action="javascript:void(0)">
+                <p class="error_footer error">Заполните</p>
+                <p class="ok_footer ok">Ваша заявка успешно отправлена!!!</p>
                 <div class="wrapFormInput clearfix">
-                    <input type="text" required="" placeholder="Введите Ваш телефон">
-                    <button>Попробовать</button>
+                    <input id="call_footer" class="call" type="text" required="" placeholder="Введите Ваш телефон">
+                    <button class="add_request" data-attr="footer">Попробовать</button>
                 </div>
             </form>
             <p>Мы перезвоним через несколько минут! :)</p>
@@ -154,11 +156,11 @@
                 <img src="<?=base_url()?>public/img/logo.png" alt="">
             </div>
             <ul class="menuMob">
-                <li><a href="#">Главная</a></li>
-                <li class="active"><a href="#">Фрукты</a></li>
-                <li><a href="#">Овощи</a></li>
-                <li><a href="#">Новости</a></li>
-                <li><a href="#">Контакты</a></li>
+                <li class="active"><a href="<?=base_url()?>">Главная</a></li>
+                <li><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
+                <li><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
+                <li><a href="<?=base_url()?>main/news">Новости</a></li>
+                <li><a href="<?=base_url()?>main/contacts">Контакты</a></li>
             </ul>
         </div>
     </div>
