@@ -1,11 +1,11 @@
 <div class="col-lg-4 col-lg-offset-4">
         <strong><center>Добваление фруктов</center></strong>
-    <a href="<?=base_url()?>admin/MainSections/allFruits" class="text-primary">ПЕРЕЙТИ К ПРОСМОТРУ</a>
+    <a href="<?=base_url()?>admin/MainSections/<?=$all?>" class="text-primary">ПЕРЕЙТИ К ПРОСМОТРУ</a>
     <h4>Пожалуйста, введите необходимую информацию ниже</h4>
     <span class="fa fa-"></span>
     <?php
     $fattr = array('class' => 'form-signin');
-    echo form_open_multipart('admin/MainSections/addFruits', $fattr);
+    echo form_open_multipart("admin/MainSections/$form", $fattr);
     ?>
     <div class="form-group">
         <label for="">Введите название.</label>
@@ -14,7 +14,7 @@
     </div>
     <div class="form-group">
         <label for="">Введите вес.</label>
-        <?php echo form_input(array('name'=>'weight', 'id'=> 'weight', 'placeholder'=>'Цена', 'class'=>'form-control', 'value'=> set_value('lastname'))); ?>
+        <?php echo form_input(array('name'=>'weight', 'id'=> 'weight', 'placeholder'=>'Вес', 'class'=>'form-control', 'value'=> set_value('lastname'))); ?>
         <?php echo form_error('weight');?>
     </div>
     <div class="form-group">

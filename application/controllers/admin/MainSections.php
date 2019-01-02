@@ -121,7 +121,7 @@ class MainSections extends CI_Controller
         $table = 'fruits';
         $id = 6;
         $result = $this->AdminModels->getid($table, $id);
-        print_r($result);
+        print_r($result[0]->img_name);
         die();
 
     }
@@ -163,17 +163,20 @@ class MainSections extends CI_Controller
         redirect(site_url() . 'admin/MainSections/allBox');
     }
 
-    // для загрузки всех фруктов
+    // для загрузки всех фруктов и овощей
     public function allFruits()
     {
         $config['base_url'] = base_url() . 'admin/MainSections/allFruits/';
-        $config['total_rows'] = $this->db->count_all('box');
+        $config['total_rows'] = $this->db->count_all('fruits');
         $config['per_page'] = 10;
         $config['full_tag_open'] = '<p class="pag">';
         $config['full_tag_close'] = '</p>';
         $this->pagination->initialize($config);
         $table = 'fruits';
         $data['fruits'] = $this->AdminModels->selectAll($table, $config['per_page'], $this->uri->segment(4));
+        $data['title'] = 'Фрукты';
+        $data['add'] = 'addFruits';
+        $data['delete'] = 'deleteFruits';
 
         $this->load->view('admin/header');
         $this->load->view('admin/navbar');
@@ -182,7 +185,7 @@ class MainSections extends CI_Controller
         $this->load->view('admin/footer');
     }
 
-    //  для добавления в бд коробки.
+    // для добавления в бд фруктов.
     public function addFruits()
     {
 
@@ -202,10 +205,12 @@ class MainSections extends CI_Controller
 
         if ($this->form_validation->run() == FALSE) {
             $array['imgerror'] = '';
+            $arr['form'] = 'addFruits';
+            $arr['all'] = 'allFruits';
             $this->load->view('admin/header');
             $this->load->view('admin/navbar', $array);
             $this->load->view('admin/container');
-            $this->load->view('admin/addFruits');
+            $this->load->view('admin/addFruits',$arr);
             $this->load->view('admin/footer');
         } else {
             $array['name'] = $this->input->post('name');
@@ -251,34 +256,154 @@ class MainSections extends CI_Controller
         redirect(site_url() . 'admin/MainSections/allFruits');
     }
 
+    public function allVege(){
+        $config['base_url'] = base_url() . 'admin/MainSections/allFruits/';
+        $config['total_rows'] = $this->db->count_all('vegetables');
+        $config['per_page'] = 10;
+        $config['full_tag_open'] = '<p class="pag">';
+        $config['full_tag_close'] = '</p>';
+        $this->pagination->initialize($config);
+        $table = 'vegetables';
+        $data['fruits'] = $this->AdminModels->selectAll($table, $config['per_page'], $this->uri->segment(4));
+        $data['title'] = 'Овощи';
+        $data['add'] = 'addVegetable';
+        $data['delete'] = 'deleteVegetable';
 
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/container');
+        $this->load->view('admin/allFruits', $data);
+        $this->load->view('admin/footer');
+    }
 
-
-
-
-
-    // для загрузки станички  редактирования
-    public function updateSp($id)
+    // для добавления в бд  овощей.
+    public function addVegetable()
     {
+
+        $this->form_validation->set_rules('name', 'First Name', 'required|trim|max_length[100]',
+            array('required' => 'Заполните название.',
+                'max_length' => 'Должно содержать не больше 100 символов.'
+            )
+        );
+        $this->form_validation->set_rules('price', 'Last Name', 'required|trim',
+            array('required' => 'Заполните цену.')
+        );
+
+        $this->form_validation->set_rules('weight', 'role', 'required|trim',
+            array('required' => 'Заполните.',
+            )
+        );
+
+        if ($this->form_validation->run() == FALSE) {
+            $array['imgerror'] = '';
+            $arr['form'] = 'addVegetable';
+            $arr['all'] = 'allVege';
+            $this->load->view('admin/header');
+            $this->load->view('admin/navbar', $array);
+            $this->load->view('admin/container');
+            $this->load->view('admin/addFruits',$arr);
+            $this->load->view('admin/footer');
+        } else {
+            $array['name'] = $this->input->post('name');
+            $array['weight'] = $this->input->post('weight');
+            $array['price'] = $this->input->post('price');
+            $location = 'fruits';
+            $imgname = 'photo';
+            $ph = $this->do_upload($location, $imgname);
+            if (isset($ph['upload_data'])) {
+                $array['imgname'] = $ph['upload_data']['file_name'];
+                $addBox = $this->AdminModels->addVegetable($array);
+                if (!$addBox) {
+                    $this->session->set_flashdata('flash_message', 'Не удалось добавить данные!');
+                } else {
+                    $this->session->set_flashdata('success_message', 'Данные успешно добавлены.');
+                }
+                redirect(site_url() . 'admin/MainSections/addVegetable');
+
+            } else {
+                $array['imgerror'] = $ph['error'];
+                $this->load->view('admin/header');
+                $this->load->view('admin/navbar', $array);
+                $this->load->view('admin/container');
+                $this->load->view('admin/addFruits');
+                $this->load->view('admin/footer');
+            }
+
+        }
+
+
+    }
+
+    // для Удаление овощей
+    public function deleteVegetable($id){
+        $table = 'vegetables';
+        $puth = "fruits";
+        $result = $this->AdminModels->deleteOne($table, $id,$puth);
+        if ($result == FALSE) {
+            $this->session->set_flashdata('flash_message', 'Упс! Произошла ошибка');
+        } else {
+            $this->session->set_flashdata('success_message', 'Успешно удален!');
+
+        }
+        redirect(site_url() . 'admin/MainSections/allVege');
+    }
+
+    // для загрузки все новостей
+    public function allNews(){
+        $config['base_url'] = base_url() . 'admin/MainSections/allNews/';
+        $config['total_rows'] = $this->db->count_all('news');
+        $config['per_page'] = 10;
+        $config['full_tag_open'] = '<p class="pag">';
+        $config['full_tag_close'] = '</p>';
+        $this->pagination->initialize($config);
+        $table = 'fruits';
+        $data['fruits'] = $this->AdminModels->selectAll($table, $config['per_page'], $this->uri->segment(4));
+        $data['title'] = 'Фрукты';
+        $data['add'] = 'addFruits';
+        $data['delete'] = 'deleteFruits';
+
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/container');
+        $this->load->view('admin/allFruits', $data);
+        $this->load->view('admin/footer');
+    }
+
+    // для загрузки странички  редактирования box
+    public function updateBox($id)
+    {
+
         if ($id) {
-            $table = 'spo';
-            $data['sportpit'] = $this->AdminModels->getId($table, $id);
+            $table = 'box';
+            $data['box'] = $this->AdminModels->getId($table, $id);
+            $query = $this->db->query("Select * From box_composition Where id_box = $id");
+            $data['composition'] = $query->result_array();
+
             $data['imgerror'] = '';
-            if ($data['sportpit'] != false) {
+            if ($data['box'] != false) {
                 $this->load->view('admin/header');
                 $this->load->view('admin/navbar');
                 $this->load->view('admin/container');
-                $this->load->view('admin/updateSportPit', $data);
+                $this->load->view('admin/updateBox', $data);
                 $this->load->view('admin/footer');
             } else {
-                redirect(site_url() . 'admin/mainAdmin/');
+                redirect(site_url() . 'admin/MainSections/allbox');
             }
 
         } else {
-            redirect(site_url() . 'admin/mainAdmin/');
+            redirect(site_url() . 'admin/');
         }
 
     }
+
+
+
+
+
+
+
+
+
 
     // для редактирования спортивного питание
     public function updateSportpit()

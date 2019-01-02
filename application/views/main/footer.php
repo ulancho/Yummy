@@ -1,12 +1,3 @@
-<div class="basket-count">
-    <a href="<?=base_url()?>main/cart">
-    <div class="basket-count-content">
-        <div id="total total-cart-count" class="count badge">
-            <div id="common-amount">0</div>
-        </div>
-    </div>
-    </a>
-</div>
 <section class="delivery">
     <div class="wrapper">
         <h2>Доставка</h2>

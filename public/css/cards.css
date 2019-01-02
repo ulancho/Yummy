@@ -9,7 +9,7 @@
 }
 
 .card-counter:hover{
-    box-shadow: 4px 4px 20px #DADADA;
+    box-shadow: 2px 2px 15px #120b1a;
     transition: .3s linear all;
 }
 

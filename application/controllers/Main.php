@@ -140,7 +140,6 @@ class Main extends CI_Controller {
         $data['bootstrap'] = $url."public/css/bootstrap.min.css";
         $this->load->view('main/header',$data);
         $this->load->view('main/contacts');
-        $this->load->view('main/footer');
     }
     public function contactAction(){
         $name = $this->input->post('name');
