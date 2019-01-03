@@ -5,22 +5,22 @@
 <div class="col-lg-4 col-lg-offset-1">
     <?php
     $fattr = array('class' => 'form-signin');
-    echo form_open_multipart('admin/MainSections/updateBoxAction', $fattr);
+    echo form_open_multipart('admin/MainSections/updateBoxActionMain', $fattr);
     ?>
     <div class="form-group">
         <label for="">Введите название.Не больше 60 символов </label>
-        <input type="hidden" name="id" value="<?=$box[0]->id?>">
+        <input class="form-control" type="hidden" name="id" value="<?=$box[0]->id?>">
         <?php echo form_input(array('name'=>'name', 'id'=> 'name', 'placeholder'=>'Название', 'class'=>'form-control', 'value' => $box[0]->title)); ?>
         <?php echo form_error('name');?>
     </div>
     <div class="form-group">
-        <label for="">Введите вес.</label>
-        <?php echo form_input(array('name'=>'price', 'id'=> 'price', 'placeholder'=>'вес', 'class'=>'form-control', 'value'=> $box[0]->weight)); ?>
+        <label for="">Введите цену.</label>
+        <?php echo form_input(array('name'=>'price', 'id'=> 'price', 'placeholder'=>'Цена', 'class'=>'form-control', 'value'=> $box[0]->price)); ?>
         <?php echo form_error('price');?>
     </div>
     <div class="form-group">
-        <label for="">Введите цену.</label>
-        <?php echo form_input(array('name'=>'weight', 'id'=> 'weight', 'placeholder'=>'Цена', 'class'=>'form-control', 'value'=> $box[0]->price)); ?>
+        <label for="">Введите вес.</label>
+        <?php echo form_input(array('name'=>'weight', 'id'=> 'weight', 'placeholder'=>'Вес', 'class'=>'form-control', 'value'=> $box[0]->weight)); ?>
         <?php echo form_error('weight');?>
     </div>
 
@@ -35,22 +35,23 @@
     <?php echo form_close(); ?>
 </div>
 
+
+
 <div class="col-lg-4 col-lg-offset-1">
     <?php
     $fattr = array('class' => 'form-signin');
-    echo form_open_multipart('admin/MainSections/updateBoxAction', $fattr);
+    echo form_open_multipart('admin/MainSections/updateBoxActionTwo', $fattr);
     ?>
+    <input class="form-control" type="hidden" name="box_id" value="<?=$box[0]->id?>">
     <?php
-    $i = 1;
     foreach ($composition as $box_composition):?>
     <div class="form-group">
         <label for="">Введите название</label>
-        <input type="number" value="<?=$box_composition['id']?>">
-            <input name="composition[<?=$i?>]" class="form-control" type="text" value="<?=$box_composition['title']?>">
+        <input name="id[]" type="hidden" value="<?=$box_composition['id']?>">
+            <input name="composition[]" class="form-control" type="text" value="<?=$box_composition['title']?>">
     </div>
 <?php
-$i++;
     endforeach;?>
-    <?php echo form_submit(array('value'=>'Добавить', 'class'=>'btn btn-lg btn-primary btn-block')); ?>
+    <?php echo form_submit(array('value'=>'Изменить', 'class'=>'btn btn-lg btn-primary btn-block')); ?>
     <?php echo form_close(); ?>
 </div>

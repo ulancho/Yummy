@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="<?=base_url()?>public/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/slick/slick-theme.css">
     <link rel="stylesheet" href="<?=base_url()?>public/css/style.css?ver=0.0.7">
+    <link rel="stylesheet" href="<?=base_url()?>public/css/pagination.css?">
     <link rel="stylesheet" href="<?=$bootstrap?>">
     <title>Yummy fruit</title>
 </head>
@@ -27,10 +28,10 @@
             <div class="headMenuSocLink clearfix">
                 <ul class="headMenu">
                     <li class="active"><a href="<?=base_url()?>">Главная</a></li>
-                    <li><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
-                    <li><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
-                    <li><a href="<?=base_url()?>main/news">Новости</a></li>
-                    <li><a href="<?=base_url()?>main/contacts">Контакты</a></li>
+                    <li ><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
+                    <li ><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
+                    <li ><a href="<?=base_url()?>main/news">Новости</a></li>
+                    <li ><a href="<?=base_url()?>main/contacts">Контакты</a></li>
                 </ul>
                 <div class="headSocLink clearfix">
                     <ul>
@@ -41,7 +42,7 @@
             </div>
         </div>
         <div class="logoWrap">
-            <a href="#"><img src="<?=base_url()?>public/img/logo.png" alt="Yummy fruit"></a>
+            <a href="<?=base_url()?>"><img src="<?=base_url()?>public/img/logo.png" alt="Yummy fruit"></a>
             <div class="logoParallax">
                 <div id="logoParallax">
                     <img src="<?=base_url()?>public/img/logoParallax.png" alt="Yummy fruit" data-depth="0.9">
@@ -114,7 +115,7 @@
         </div>
     </div>
 </header>
-<div class="basket-count">
+<div class="basket-count <?=$none?>">
     <a href="<?=base_url()?>main/cart">
         <div class="basket-count-content">
             <div id="total total-cart-count" class="count badge">

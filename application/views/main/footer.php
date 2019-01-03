@@ -48,66 +48,29 @@
     <div class="wrapper">
         <h2>Блог</h2>
         <div class="blogList clearfix">
-            <div class="blogListItem clearfix flex">
-                <div class="blogListItemImg">
-                    <div class="clipPathBorder">
-                        <img src="images/blog1.png" alt="">
+
+            <?php foreach ($news as $row):?>
+                <div class="blogListItem clearfix flex">
+                    <div class="blogListItemImg">
+                        <div class="clipPathBorder">
+                            <img src="<?=base_url()?>public/images/news/<?=$row['img_name']?>" alt="продукты в Бишкеке">
+                        </div>
+                    </div>
+                    <div class="blogListItemDes">
+                        <h3><?=$row['title']?>!</h3>
+                        <p><?=$row['title2']?>...</p>
+                        <div class="blogListItemDesBtn clearfix">
+                            <a href="<?=base_url()?>Main/oneNews/<?=$row['id']?>">Подробнее...</a>
+                        </div>
                     </div>
                 </div>
-                <div class="blogListItemDes">
-                    <h3>Бесплатная доставка фруктов!</h3>
-                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
-                    <div class="blogListItemDesBtn clearfix">
-                        <a href="#">Подробнее...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="blogListItem clearfix">
-                <div class="blogListItemImg">
-                    <div class="clipPathBorder">
-                        <img src="<?=base_url()?>public/images/blog1.png" alt="">
-                    </div>
-                </div>
-                <div class="blogListItemDes">
-                    <h3>Бесплатная доставка фруктов!</h3>
-                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
-                    <div class="blogListItemDesBtn clearfix">
-                        <a href="#">Подробнее...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="blogListItem clearfix">
-                <div class="blogListItemImg">
-                    <div class="clipPathBorder">
-                        <img src="<?=base_url()?>public/images/blog1.png" alt="">
-                    </div>
-                </div>
-                <div class="blogListItemDes">
-                    <h3>Бесплатная доставка фруктов!</h3>
-                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
-                    <div class="blogListItemDesBtn clearfix">
-                        <a href="#">Подробнее...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="blogListItem clearfix">
-                <div class="blogListItemImg">
-                    <div class="clipPathBorder">
-                        <img src="<?=base_url()?>public/images/blog1.png" alt="">
-                    </div>
-                </div>
-                <div class="blogListItemDes">
-                    <h3>Бесплатная доставка фруктов!</h3>
-                    <p>На нашем сайте интернет магазина «Yummi Fruit» есть удобный каталог самых свежих фруктов и овощей, - Вы можете заказать он-лайн доставку продуктов прямо на дом.</p>
-                    <div class="blogListItemDesBtn clearfix">
-                        <a href="#">Подробнее...</a>
-                    </div>
-                </div>
-            </div>
+            <?php endforeach;?>
         </div>
+
         <div class="allBlogBtn">
-            <a href="#">Посмотреть все новости</a>
+            <a href="<?=base_url()?>main/news">Посмотреть все новости</a>
         </div>
+
     </div>
 </section>
 <footer>

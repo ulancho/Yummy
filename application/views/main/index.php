@@ -1,11 +1,10 @@
 <section class="product">
     <div class="wrapper">
       <div class="productList flex">
-          <?php
-          foreach ($box as $box):?>
+          <?php foreach ($box as $box):?>
               <div class="productItem">
                   <div class="productItemFront">
-                      <img src="<?=base_url()?>public/images/main/<?php echo $box['img_name'];?>" alt="">
+                      <img class="img-param" src="<?=base_url()?>public/images/main/<?php echo $box['img_name'];?>" alt="Фрукты и овощи">
                       <h3><?php echo $box['title'];?></h3>
                       <a href="#" class="productItemBtn">Заказать</a>
                   </div>

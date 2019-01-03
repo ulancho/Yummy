@@ -5,6 +5,7 @@ class Main extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        $this->load->library('pagination');
         $this->load->helper('url');
         $this->load->library('email');
         $this->load->helper('html');
@@ -59,24 +60,39 @@ class Main extends CI_Controller {
         $data['box'] = $arr;
         $arr['noHomePage'] = 'm';
         $arr['bootstrap'] = '';
+        $arr['none'] = 'l';
+
+        $table = 'fruits';
+        $cart['prod'] = $this->AdminModels->selectAllArray($table);
+        $table2 = 'vegetables';
+        $cart['prodvg'] = $this->AdminModels->selectAllArray($table2);
+
+        $footer['news'] = $this->AdminModels->newsfour();
 
         $this->load->view('main/header',$arr);
         $this->load->view('main/index',$data);
-        $this->load->view('main/footer');
+        $this->load->view('main/bugaga',$cart);
+        $this->load->view('main/footer',$footer);
     }
     public function cart(){
-
         $url = base_url();
         $arr = $this->getBox();
         foreach ($arr as $id){
-            $data['composition'][] = $this->AdminModels->getBoxComposition($id['id']);
+            $cart['composition'][] = $this->AdminModels->getBoxComposition($id['id']);
         }
+        $cart['box'] = $arr;
+        $table = 'fruits';
+        $cart['prod'] = $this->AdminModels->selectAllArray($table);
 
-        $data['box'] = $arr;
+        $table2 = 'vegetables';
+        $cart['prodvg'] = $this->AdminModels->selectAllArray($table2);
+
         $data['bootstrap'] = $url."public/css/bootstrap.min.css";
         $data['noHomePage'] = 'noHomePage';
+        $data['none'] = 'l';
         $this->load->view('main/header',$data);
         $this->load->view('main/cart');
+        $this->load->view('main/bugaga',$cart);
         $this->load->view('main/footer');
     }
     public function cart_proc(){
@@ -89,7 +105,7 @@ class Main extends CI_Controller {
     $count = count($json_decode)-1;
         $zakaz = '';
         for ($i = 1; $i <=$count; $i++) {
-            $zakaz = $zakaz. '№'.$i.'название='.$json_decode[$i]->name.'; количество='.$json_decode[$i]->count.'<br>';
+            $zakaz = $zakaz. '№'.$i.'название='.$json_decode[$i]->name.'; количество='.$json_decode[$i]->count.' шт/кг<br>';
         }
         $this->send_mail($phone,$name,$adress,$zakaz);
         $message = array(
@@ -112,32 +128,73 @@ class Main extends CI_Controller {
         echo json_encode($massiv);
     }
     public function fruits(){
-        $data['noHomePage'] = 'noHomePage';
+        $cart['box'] = $this->getBox();
+        $table2 = 'vegetables';
+        $cart['prodvg'] = $this->AdminModels->selectAllArray($table2);
+
+        $table = 'fruits';
+        $arr['prod'] = $this->AdminModels->selectAllArray($table);
+        $data['noHomePage'] = 'm';
         $data['bootstrap'] = '';
         $arr['title'] = 'ФРУКТЫ';
+        $data['none'] = 'l';
+        $footer['news'] =
+
         $this->load->view('main/header',$data);
         $this->load->view('main/fruits',$arr);
+        $this->load->view('main/bugaga',$cart);
         $this->load->view('main/footer');
     }
     public function vegetables(){
-        $data['noHomePage'] = 'noHomePage';
+        $cart['box'] = $this->getBox();
+        $table2 = 'fruits';
+        $cart['prod'] = $this->AdminModels->selectAllArray($table2);
+
+
+        $data['noHomePage'] = 'm';
         $data['bootstrap'] = '';
         $arr['title'] = 'ОВОЩИ';
+        $data['none'] = 'l';
+        $table = 'vegetables';
+        $arr['prod'] = $this->AdminModels->selectAllArray($table);
         $this->load->view('main/header',$data);
         $this->load->view('main/fruits',$arr);
+        $this->load->view('main/bugaga',$cart);
         $this->load->view('main/footer');
     }
     public function news(){
+        $config['base_url'] = base_url() . 'Main/news/';
+        $config['total_rows'] = $this->db->count_all('news');
+        $config['per_page'] = 10;
+        $config['full_tag_open'] = '<div class="pagination">';
+        $config['full_tag_close'] = '</div>';
+        $config['next_link'] = 'Следующая';
+//        $config['next_tag_open'] = '<a href="#">';
+//        $config['next_tag_close'] = '</a>';
+
+        $config['prev_link'] = 'Предыдущая';
+//        $config['prev_tag_open'] = '<a href="#">';
+//        $config['prev_tag_close'] = '</a>';
+        $config['display_pages'] = FALSE;
+        $this->pagination->initialize($config);
+        $table = 'news';
+        $arr['news'] = $this->AdminModels->selectAll($table, $config['per_page'], $this->uri->segment(3));
+
+
+
+
         $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = '';
+        $data['none'] = 'none';
         $this->load->view('main/header',$data);
-        $this->load->view('main/news');
+        $this->load->view('main/news',$arr);
         $this->load->view('main/footer');
     }
     public function contacts(){
         $url = base_url();
         $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = $url."public/css/bootstrap.min.css";
+        $data['none'] = 'none';
         $this->load->view('main/header',$data);
         $this->load->view('main/contacts');
     }
@@ -170,4 +227,18 @@ class Main extends CI_Controller {
         }
         echo json_encode($massiv);
     }
+
+    public function oneNews($id){
+        $table = 'news';
+        $arr['news'] = $this->AdminModels->getId($table, $id);
+        $data['noHomePage'] = 'noHomePage';
+        $data['bootstrap'] = '';
+        $data['none'] = 'none';
+        $this->load->view('main/header',$data);
+        $this->load->view('main/newsone',$arr);
+        $this->load->view('main/footer');
+    }
+
+
+
 }

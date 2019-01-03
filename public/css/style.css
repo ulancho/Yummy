@@ -55,6 +55,10 @@ html, body{
 	color: #555555;
 }
 
+.img-param{
+	height: 300px!important;
+	width: 300px!important;
+}
 .modal {
 	display:    none;
 	position:   fixed;
@@ -505,7 +509,8 @@ form{
 	margin: 4px;
 	-webkit-box-shadow: 0 4px 10px -3px #c1c1c1, 0 0 0 1px #d5d5d5 inset;
     -moz-box-shadow: 0 4px 10px -3px #c1c1c1, 0 0 0 1px #d5d5d5 inset;
-    box-shadow: 0 4px 10px -3px #c1c1c1, 0 0 0 1px #d5d5d5 inset;
+    box-shadow: 0 4px 10px -3px #c1c1c1, 0 0 0 1px #d5d5d5 inset;    
+    overflow-y: auto;
 }
 .productItemFront{
 	position: relative;
@@ -523,7 +528,6 @@ form{
 	transition: all 0.4s;
 	opacity: 1;
 	height: 100%;
-    overflow-y: auto;
 }
 .productItemBackContent{
 	color: #000;

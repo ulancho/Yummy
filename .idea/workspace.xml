@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6522ba3-f880-4d37-9909-6d03189441f2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/admin/updateBox.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/main/newsone.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Main.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Main.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Admin_page.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Admin_page.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/admin/MainSections.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/MainSections.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/AdminModels.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/AdminModels.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/addFruits.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/addFruits.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/admin/allFruits.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/allFruits.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/indexcontainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/indexcontainer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/main/contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/contacts.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/main/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/main/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/cards.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/cards.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/updateBox.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/updateBox.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/main/fruits.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/main/fruits.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,10 +25,9 @@
       <file leaf-file-name="MainSections.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/admin/MainSections.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="380" lean-forward="true" selection-start-line="380" selection-end-line="380" />
+            <state relative-caret-position="15">
+              <caret line="351" lean-forward="true" selection-start-line="351" selection-end-line="351" />
               <folding>
-                <element signature="n#__construct#0;n#MainSections#0;n#!!top" />
                 <element signature="n#box#0;n#MainSections#0;n#!!top" />
                 <element signature="n#do_upload#0;n#MainSections#0;n#!!top" />
                 <element signature="n#addBox#0;n#MainSections#0;n#!!top" />
@@ -45,25 +38,41 @@
                 <element signature="n#addFruits#0;n#MainSections#0;n#!!top" />
                 <element signature="n#deleteFruits#0;n#MainSections#0;n#!!top" />
                 <element signature="n#allVege#0;n#MainSections#0;n#!!top" />
-                <element signature="n#add#0;n#MainSections#0;n#!!top" />
-                <element signature="n#deleteFruits#1;n#MainSections#0;n#!!top" />
+                <element signature="n#addVegetable#0;n#MainSections#0;n#!!top" />
+                <element signature="n#deleteVegetable#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateBox#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateBoxActionMain#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateBoxActionTwo#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateFruits#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateFruitsAction#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateVegetable#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateVegAction#0;n#MainSections#0;n#!!top" />
                 <element signature="n#allNews#0;n#MainSections#0;n#!!top" />
-                <element signature="n#updateSportpit#0;n#MainSections#0;n#!!top" />
-                <element signature="n#allsporteq#0;n#MainSections#0;n#!!top" />
-                <element signature="n#updateEq#0;n#MainSections#0;n#!!top" />
-                <element signature="n#updatefunctionEq#0;n#MainSections#0;n#!!top" />
-                <element signature="n#deleteEq#0;n#MainSections#0;n#!!top" />
-                <element signature="n#addEq#0;n#MainSections#0;n#!!top" />
+                <element signature="n#addNews#0;n#MainSections#0;n#!!top" />
+                <element signature="n#deleteNews#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateNews#0;n#MainSections#0;n#!!top" />
+                <element signature="n#updateNewsAction#0;n#MainSections#0;n#!!top" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/main/cart.php">
+      <file leaf-file-name="Main.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/Main.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="23" selection-end-column="42" />
+            <state relative-caret-position="30">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+              <folding>
+                <element signature="n#__construct#0;n#Main#0;n#!!top" />
+                <element signature="n#send_mail#0;n#Main#0;n#!!top" />
+                <element signature="n#getBox#0;n#Main#0;n#!!top" />
+                <element signature="n#cart#0;n#Main#0;n#!!top" />
+                <element signature="n#cart_proc#0;n#Main#0;n#!!top" />
+                <element signature="n#add_request#0;n#Main#0;n#!!top" />
+                <element signature="n#fruits#0;n#Main#0;n#!!top" />
+                <element signature="n#vegetables#0;n#Main#0;n#!!top" />
+                <element signature="n#contactAction#0;n#Main#0;n#!!top" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,15 +80,22 @@
       <file leaf-file-name="AdminModels.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/models/AdminModels.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="112" column="1" lean-forward="true" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+            <state relative-caret-position="36">
+              <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
               <folding>
+                <element signature="n#__construct#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#getBoxComposition#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#addBox#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#addFruits#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#addVegetable#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#add_box_composition#0;n#AdminModels#0;n#!!top" />
+                <element signature="n#updateBox#0;n#AdminModels#0;n#!!top" />
+                <element signature="n#update_composition#0;n#AdminModels#0;n#!!top" />
+                <element signature="n#updateFrVg#0;n#AdminModels#0;n#!!top" />
+                <element signature="n#addNews#0;n#AdminModels#0;n#!!top" />
+                <element signature="n#updateNews#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#selectAll#0;n#AdminModels#0;n#!!top" />
+                <element signature="n#selectAllArray#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#getId#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#deleteFiles#0;n#AdminModels#0;n#!!top" />
                 <element signature="n#deleteOne#0;n#AdminModels#0;n#!!top" />
@@ -89,11 +105,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateBox.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/views/admin/updateBox.php">
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/main/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+            <state relative-caret-position="11">
+              <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="news.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/main/news.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pagination.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/pagination.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/main/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -105,6 +148,10 @@
       <find>ssl</find>
       <find>gl</find>
       <find>modal</find>
+      <find>selectAll</find>
+      <find>common-amount</find>
+      <find>one-good-</find>
+      <find>count-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,29 +162,38 @@
       <list>
         <option value="$PROJECT_DIR$/application/views/main/test.php" />
         <option value="$PROJECT_DIR$/application/views/main/partners.php" />
-        <option value="$PROJECT_DIR$/application/views/main/index.php" />
-        <option value="$PROJECT_DIR$/application/views/main/news.php" />
-        <option value="$PROJECT_DIR$/application/views/main/cart.php" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/application/views/admin/navbar.php" />
         <option value="$PROJECT_DIR$/public/js/my.js" />
-        <option value="$PROJECT_DIR$/application/views/main/fruits.php" />
         <option value="$PROJECT_DIR$/application/views/allFruits.php" />
         <option value="$PROJECT_DIR$/application/config/routes.php" />
-        <option value="$PROJECT_DIR$/application/models/AdminModels.php" />
         <option value="$PROJECT_DIR$/application/views/admin/addFruits.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/allFruits.php" />
-        <option value="$PROJECT_DIR$/application/controllers/Main.php" />
-        <option value="$PROJECT_DIR$/application/views/main/footer.php" />
-        <option value="$PROJECT_DIR$/application/views/main/header.php" />
         <option value="$PROJECT_DIR$/application/views/main/contacts.php" />
-        <option value="$PROJECT_DIR$/public/css/cards.css" />
         <option value="$PROJECT_DIR$/application/controllers/admin/Admin_page.php" />
         <option value="$PROJECT_DIR$/application/views/admin/indexcontainer.php" />
         <option value="$PROJECT_DIR$/../htdocs/gym/application/views/admin/updateSportPit.php" />
-        <option value="$PROJECT_DIR$/application/controllers/admin/MainSections.php" />
         <option value="$PROJECT_DIR$/application/views/admin/updateBox.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/updateFrVg.php" />
+        <option value="$PROJECT_DIR$/public/css/cards.css" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/application/views/main/index.php" />
+        <option value="$PROJECT_DIR$/public/js/cart.js" />
+        <option value="$PROJECT_DIR$/application/views/main/fruits.php" />
+        <option value="$PROJECT_DIR$/application/views/main/bugaga.php" />
+        <option value="$PROJECT_DIR$/application/views/main/cart.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/allFruits.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/allBox.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/allNews.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/addNews.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/updateNews.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/MainSections.php" />
+        <option value="$PROJECT_DIR$/application/views/main/newsone.php" />
+        <option value="$PROJECT_DIR$/application/views/main/news.php" />
+        <option value="$PROJECT_DIR$/application/views/main/header.php" />
+        <option value="$PROJECT_DIR$/public/css/pagination.css" />
+        <option value="$PROJECT_DIR$/application/models/AdminModels.php" />
+        <option value="$PROJECT_DIR$/application/controllers/Main.php" />
+        <option value="$PROJECT_DIR$/application/views/main/footer.php" />
       </list>
     </option>
   </component>
@@ -173,6 +229,12 @@
               <item name="fruit" type="b2602c69:ProjectViewProjectNode" />
               <item name="fruit" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="fruit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="fruit" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="fruit" type="b2602c69:ProjectViewProjectNode" />
@@ -242,12 +304,13 @@
       <workItem from="1546177195340" duration="2532000" />
       <workItem from="1546189865953" duration="7630000" />
       <workItem from="1546331324856" duration="14825000" />
-      <workItem from="1546412647304" duration="11699000" />
+      <workItem from="1546412647304" duration="12220000" />
+      <workItem from="1546497626904" duration="33006000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45995000" />
+    <option name="totallyTimeSpent" value="79522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -261,9 +324,10 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.3294893" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.14220877" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18381241" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21709532" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3294893" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -273,30 +337,29 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="right" id="Remote Host" order="3" weight="0.14220877" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="3" weight="0.14220877" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18683812" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.49924356" weight="0.33772653" />
+      <window_info anchor="bottom" id="File Transfer" order="9" sideWeight="0.49848714" weight="0.33772653" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" weight="0.3294893" />
-      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.50075644" side_tool="true" weight="0.33772653" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5015129" side_tool="true" weight="0.33772653" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18154311" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -307,17 +370,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="8" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/main/fruits.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/allFruits.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -330,7 +386,6 @@
         <state relative-caret-position="2805">
           <caret line="165" column="32" lean-forward="true" selection-start-line="165" selection-start-column="32" selection-end-line="165" selection-end-column="32" />
           <folding>
-            <element signature="n#__construct#0;n#MainSections#0;n#!!top" />
             <element signature="n#box#0;n#MainSections#0;n#!!top" />
             <element signature="n#do_upload#0;n#MainSections#0;n#!!top" />
             <element signature="n#addBox#0;n#MainSections#0;n#!!top" />
@@ -341,15 +396,20 @@
             <element signature="n#addFruits#0;n#MainSections#0;n#!!top" />
             <element signature="n#deleteFruits#0;n#MainSections#0;n#!!top" />
             <element signature="n#allVege#0;n#MainSections#0;n#!!top" />
-            <element signature="n#add#0;n#MainSections#0;n#!!top" />
-            <element signature="n#deleteFruits#1;n#MainSections#0;n#!!top" />
+            <element signature="n#addVegetable#0;n#MainSections#0;n#!!top" />
+            <element signature="n#deleteVegetable#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateBox#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateBoxActionMain#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateBoxActionTwo#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateFruits#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateFruitsAction#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateVegetable#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateVegAction#0;n#MainSections#0;n#!!top" />
             <element signature="n#allNews#0;n#MainSections#0;n#!!top" />
-            <element signature="n#updateSportpit#0;n#MainSections#0;n#!!top" />
-            <element signature="n#allsporteq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#updateEq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#updatefunctionEq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#deleteEq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#addEq#0;n#MainSections#0;n#!!top" />
+            <element signature="n#addNews#0;n#MainSections#0;n#!!top" />
+            <element signature="n#deleteNews#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateNews#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateNewsAction#0;n#MainSections#0;n#!!top" />
           </folding>
         </state>
       </provider>
@@ -359,12 +419,19 @@
         <state relative-caret-position="493">
           <caret line="55" column="13" lean-forward="true" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
           <folding>
+            <element signature="n#__construct#0;n#AdminModels#0;n#!!top" />
             <element signature="n#getBoxComposition#0;n#AdminModels#0;n#!!top" />
             <element signature="n#addBox#0;n#AdminModels#0;n#!!top" />
             <element signature="n#addFruits#0;n#AdminModels#0;n#!!top" />
             <element signature="n#addVegetable#0;n#AdminModels#0;n#!!top" />
             <element signature="n#add_box_composition#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#updateBox#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#update_composition#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#updateFrVg#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#addNews#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#updateNews#0;n#AdminModels#0;n#!!top" />
             <element signature="n#selectAll#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#selectAllArray#0;n#AdminModels#0;n#!!top" />
             <element signature="n#getId#0;n#AdminModels#0;n#!!top" />
             <element signature="n#deleteFiles#0;n#AdminModels#0;n#!!top" />
             <element signature="n#deleteOne#0;n#AdminModels#0;n#!!top" />
@@ -388,13 +455,11 @@
             <element signature="n#__construct#0;n#Main#0;n#!!top" />
             <element signature="n#send_mail#0;n#Main#0;n#!!top" />
             <element signature="n#getBox#0;n#Main#0;n#!!top" />
-            <element signature="n#index#0;n#Main#0;n#!!top" />
             <element signature="n#cart#0;n#Main#0;n#!!top" />
             <element signature="n#cart_proc#0;n#Main#0;n#!!top" />
             <element signature="n#add_request#0;n#Main#0;n#!!top" />
             <element signature="n#fruits#0;n#Main#0;n#!!top" />
             <element signature="n#vegetables#0;n#Main#0;n#!!top" />
-            <element signature="n#news#0;n#Main#0;n#!!top" />
             <element signature="n#contactAction#0;n#Main#0;n#!!top" />
           </folding>
         </state>
@@ -415,13 +480,11 @@
             <element signature="n#__construct#0;n#Main#0;n#!!top" />
             <element signature="n#send_mail#0;n#Main#0;n#!!top" />
             <element signature="n#getBox#0;n#Main#0;n#!!top" />
-            <element signature="n#index#0;n#Main#0;n#!!top" />
             <element signature="n#cart#0;n#Main#0;n#!!top" />
             <element signature="n#cart_proc#0;n#Main#0;n#!!top" />
             <element signature="n#add_request#0;n#Main#0;n#!!top" />
             <element signature="n#fruits#0;n#Main#0;n#!!top" />
             <element signature="n#vegetables#0;n#Main#0;n#!!top" />
-            <element signature="n#news#0;n#Main#0;n#!!top" />
             <element signature="n#contactAction#0;n#Main#0;n#!!top" />
           </folding>
         </state>
@@ -435,13 +498,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/partners.php" />
-    <entry file="file://$PROJECT_DIR$/application/views/main/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="38" column="33" lean-forward="true" selection-start-line="38" selection-start-column="33" selection-end-line="38" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.editorconfig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -463,13 +519,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/navbar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -477,38 +526,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="57" column="6" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/allBox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="58" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/addBox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="38" lean-forward="true" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -526,37 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/fruits.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="96" column="69" lean-forward="true" selection-start-line="96" selection-start-column="69" selection-end-line="96" selection-end-column="69" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="191" column="7" selection-start-line="112" selection-end-line="191" selection-end-column="7" />
-          <folding>
-            <element signature="n#section#0;n#!!top" />
-            <element signature="n#section#1;n#!!top" />
-            <element signature="n#section#2;n#!!top" />
-            <element signature="n#div#1;n#!!top" />
-            <element signature="n#div#2;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/main/contacts.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -568,50 +558,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/Main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="141" column="43" selection-start-line="141" selection-start-column="43" selection-end-line="141" selection-end-column="43" />
-          <folding>
-            <element signature="n#__construct#0;n#Main#0;n#!!top" />
-            <element signature="n#send_mail#0;n#Main#0;n#!!top" />
-            <element signature="n#getBox#0;n#Main#0;n#!!top" />
-            <element signature="n#index#0;n#Main#0;n#!!top" />
-            <element signature="n#cart#0;n#Main#0;n#!!top" />
-            <element signature="n#cart_proc#0;n#Main#0;n#!!top" />
-            <element signature="n#add_request#0;n#Main#0;n#!!top" />
-            <element signature="n#fruits#0;n#Main#0;n#!!top" />
-            <element signature="n#vegetables#0;n#Main#0;n#!!top" />
-            <element signature="n#news#0;n#Main#0;n#!!top" />
-            <element signature="n#contactAction#0;n#Main#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/cart.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/cards.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding>
-            <element signature="e#219#292#0" />
-            <element signature="e#315#366#0" />
-            <element signature="e#388#439#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/Admin_page.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="64">
           <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding>
-            <element signature="n#__construct#0;n#Admin_page#0;n#!!top" />
-            <element signature="n#index#0;n#Admin_page#0;n#!!top" />
-            <element signature="n#login#0;n#Admin_page#0;n#!!top" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -619,13 +569,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/allFruits.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="31" column="16" lean-forward="true" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -650,38 +593,211 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/main/cart.php">
+    <entry file="file://$PROJECT_DIR$/application/views/main/vegetables.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../htdocs/travel/application/controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="20" column="14" lean-forward="true" selection-start-line="20" selection-start-column="14" selection-end-line="23" selection-end-column="42" />
+        <state>
+          <folding>
+            <element signature="n#__construct#0;n#Admin#0;n#!!top" />
+            <element signature="n#index#0;n#Admin#0;n#!!top" />
+            <element signature="n#admin_panel#0;n#Admin#0;n#!!top" />
+            <element signature="n#logout#0;n#Admin#0;n#!!top" />
+            <element signature="n#login#0;n#Admin#0;n#!!top" />
+            <element signature="n#new_log_pass#0;n#Admin#0;n#!!top" />
+            <element signature="n#add_image#0;n#Admin#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/AdminModels.php">
+    <entry file="file://$PROJECT_DIR$/../htdocs/travel/application/controllers/Admin_page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="457">
-          <caret line="112" column="1" lean-forward="true" selection-start-line="112" selection-start-column="1" selection-end-line="112" selection-end-column="1" />
+        <state relative-caret-position="265">
+          <caret line="241" column="1" lean-forward="true" selection-start-line="241" selection-start-column="1" selection-end-line="251" selection-end-column="62" />
           <folding>
-            <element signature="n#getBoxComposition#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#addBox#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#addFruits#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#addVegetable#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#add_box_composition#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#selectAll#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#getId#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#deleteFiles#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#deleteOne#0;n#AdminModels#0;n#!!top" />
-            <element signature="n#select#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#__construct#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#test#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#new_log_pass#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#update_tours#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#add_tours#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#procc_add_tours#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#procc_add_hotels#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#procc_add_slaid#0;n#Admin_page#0;n#!!top" />
+            <element signature="n#delete_tours#0;n#Admin_page#0;n#!!top" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../htdocs/travel/application/models/Admin_models.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="191" column="37" selection-start-line="191" selection-start-column="37" selection-end-line="191" selection-end-column="37" />
+          <folding>
+            <element signature="n#add_img_to_file#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#delete_img#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#deleteFiles#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#add_img_name_to_bd#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#add_img_to_file_tours#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#add_tours_procces#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#add_hotel_pocces#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#add_slaid_name_to_bd#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#delete_slaid_files#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#delete_slaid_photo#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#delete_hotels#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#up_tourss#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#get_hotel#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#up_hotel_pocces#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#get_salid_images#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#deleteSlaids#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#del_slaid_images#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#process_akcia#0;n#Admin_models#0;n#!!top" />
+            <element signature="n#add_img_to_file_ik#0;n#Admin_models#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/updateFrVg.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/main/5ea5638c715cb575b6d11d8959f0d636.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="59" column="27" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/cards.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
+          <folding>
+            <element signature="e#219#292#0" />
+            <element signature="e#315#366#0" />
+            <element signature="e#388#439#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="114" column="58" lean-forward="true" selection-start-line="114" selection-start-column="58" selection-end-line="114" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/cart.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/bugaga.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="21" column="8" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="49">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/allBox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/allFruits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="31" lean-forward="true" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addBox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="28" lean-forward="true" selection-end-line="46" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/updateBox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="6" lean-forward="true" selection-end-line="56" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/updateNews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/addNews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/newsone.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/allNews.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/fruits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="12" lean-forward="true" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/MainSections.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="380" lean-forward="true" selection-start-line="380" selection-end-line="380" />
+        <state relative-caret-position="15">
+          <caret line="351" lean-forward="true" selection-start-line="351" selection-end-line="351" />
           <folding>
-            <element signature="n#__construct#0;n#MainSections#0;n#!!top" />
             <element signature="n#box#0;n#MainSections#0;n#!!top" />
             <element signature="n#do_upload#0;n#MainSections#0;n#!!top" />
             <element signature="n#addBox#0;n#MainSections#0;n#!!top" />
@@ -692,23 +808,93 @@
             <element signature="n#addFruits#0;n#MainSections#0;n#!!top" />
             <element signature="n#deleteFruits#0;n#MainSections#0;n#!!top" />
             <element signature="n#allVege#0;n#MainSections#0;n#!!top" />
-            <element signature="n#add#0;n#MainSections#0;n#!!top" />
-            <element signature="n#deleteFruits#1;n#MainSections#0;n#!!top" />
+            <element signature="n#addVegetable#0;n#MainSections#0;n#!!top" />
+            <element signature="n#deleteVegetable#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateBox#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateBoxActionMain#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateBoxActionTwo#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateFruits#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateFruitsAction#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateVegetable#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateVegAction#0;n#MainSections#0;n#!!top" />
             <element signature="n#allNews#0;n#MainSections#0;n#!!top" />
-            <element signature="n#updateSportpit#0;n#MainSections#0;n#!!top" />
-            <element signature="n#allsporteq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#updateEq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#updatefunctionEq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#deleteEq#0;n#MainSections#0;n#!!top" />
-            <element signature="n#addEq#0;n#MainSections#0;n#!!top" />
+            <element signature="n#addNews#0;n#MainSections#0;n#!!top" />
+            <element signature="n#deleteNews#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateNews#0;n#MainSections#0;n#!!top" />
+            <element signature="n#updateNewsAction#0;n#MainSections#0;n#!!top" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/updateBox.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/Main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="55" column="6" lean-forward="true" selection-start-line="55" selection-start-column="6" selection-end-line="55" selection-end-column="6" />
+        <state relative-caret-position="30">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="n#__construct#0;n#Main#0;n#!!top" />
+            <element signature="n#send_mail#0;n#Main#0;n#!!top" />
+            <element signature="n#getBox#0;n#Main#0;n#!!top" />
+            <element signature="n#cart#0;n#Main#0;n#!!top" />
+            <element signature="n#cart_proc#0;n#Main#0;n#!!top" />
+            <element signature="n#add_request#0;n#Main#0;n#!!top" />
+            <element signature="n#fruits#0;n#Main#0;n#!!top" />
+            <element signature="n#vegetables#0;n#Main#0;n#!!top" />
+            <element signature="n#contactAction#0;n#Main#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/AdminModels.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="116" lean-forward="true" selection-start-line="116" selection-end-line="116" />
+          <folding>
+            <element signature="n#__construct#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#getBoxComposition#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#addBox#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#addFruits#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#addVegetable#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#add_box_composition#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#updateBox#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#update_composition#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#updateFrVg#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#addNews#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#updateNews#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#selectAll#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#selectAllArray#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#getId#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#deleteFiles#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#deleteOne#0;n#AdminModels#0;n#!!top" />
+            <element signature="n#select#0;n#AdminModels#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/news.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="25" lean-forward="true" selection-start-line="1" selection-start-column="25" selection-end-line="1" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/pagination.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/main/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="44" column="10" lean-forward="true" selection-start-line="44" selection-start-column="10" selection-end-line="44" selection-end-column="10" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 <div class="container">
     <section class="content-header">
         <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i>Разделы</a></li>
+            <li><a href="<?=base_url()?>admin/Admin_page/admin"><i class="fa fa-dashboard"></i>Разделы</a></li>
             <li><a href="#">Коробки</a></li>
         </ol>
         <br/>
