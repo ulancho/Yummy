@@ -16,7 +16,7 @@ class MainSections extends CI_Controller
 
         $arraydata = $this->session->userdata['login'];
         if (empty($arraydata)) {
-            redirect(site_url() . 'mainAdmin/');
+            redirect(site_url() . 'admin/Admin_page/');
         }
     }
 
@@ -232,11 +232,8 @@ class MainSections extends CI_Controller
 
             } else {
                 $array['imgerror'] = $ph['error'];
-                $this->load->view('admin/header');
-                $this->load->view('admin/navbar', $array);
-                $this->load->view('admin/container');
-                $this->load->view('admin/addFruits');
-                $this->load->view('admin/footer');
+                $this->session->set_flashdata('danger_message', 'Слишком большая картина! 1000x1000');
+                redirect(site_url() . 'admin/MainSections/addFruits');
             }
 
         }
@@ -324,11 +321,8 @@ class MainSections extends CI_Controller
 
             } else {
                 $array['imgerror'] = $ph['error'];
-                $this->load->view('admin/header');
-                $this->load->view('admin/navbar', $array);
-                $this->load->view('admin/container');
-                $this->load->view('admin/addFruits');
-                $this->load->view('admin/footer');
+                $this->session->set_flashdata('danger_message', 'Слишком большая картина! 1000x1000');
+                redirect(site_url() . 'admin/MainSections/addVegetable');
             }
 
         }
@@ -756,6 +750,79 @@ class MainSections extends CI_Controller
             redirect(site_url() . 'admin/MainSections/updateNews/' . $id);
 
         }
+    }
+
+    public function allPartners(){
+        $config['base_url'] = base_url() . 'admin/MainSections/allPartners/';
+        $config['total_rows'] = $this->db->count_all('partners');
+        $config['per_page'] = 10;
+        $config['full_tag_open'] = '<p class="pag">';
+        $config['full_tag_close'] = '</p>';
+        $this->pagination->initialize($config);
+        $table = 'partners';
+        $data['partners'] = $this->AdminModels->selectAll($table, $config['per_page'], $this->uri->segment(4));
+
+        $this->load->view('admin/header');
+        $this->load->view('admin/navbar');
+        $this->load->view('admin/container');
+        $this->load->view('admin/allPart', $data);
+        $this->load->view('admin/footer');
+    }
+
+    public function addPartners(){
+
+        $this->form_validation->set_rules('name', 'First Name', 'required|trim|max_length[100]',
+            array('required' => 'Заполните название.',
+                'max_length' => 'Должно содержать не больше 100 символов.'
+            )
+        );
+
+        if ($this->form_validation->run() == FALSE) {
+            $array['imgerror'] = '';
+            $this->load->view('admin/header');
+            $this->load->view('admin/navbar', $array);
+            $this->load->view('admin/container');
+            $this->load->view('admin/addPart');
+            $this->load->view('admin/footer');
+        } else {
+            $array['name'] = $this->input->post('name');
+            $location = 'partners';
+            $imgname = 'photo';
+            $ph = $this->do_upload($location, $imgname);
+            if (isset($ph['upload_data'])) {
+                $array['imgname'] = $ph['upload_data']['file_name'];
+                $addBox = $this->AdminModels->addPartners($array);
+                if (!$addBox) {
+                    $this->session->set_flashdata('flash_message', 'Не удалось добавить данные!');
+                } else {
+                    $this->session->set_flashdata('success_message', 'Данные успешно добавлены.');
+                }
+                redirect(site_url() . 'admin/MainSections/addPartners');
+
+            } else {
+                $array['imgerror'] = $ph['error'];
+                $this->load->view('admin/header');
+                $this->load->view('admin/navbar', $array);
+                $this->load->view('admin/container');
+                $this->load->view('admin/addPartners');
+                $this->load->view('admin/footer');
+            }
+
+        }
+
+    }
+
+    public function deletePartners($id){
+        $table = 'partners';
+        $puth = "partners";
+        $result = $this->AdminModels->deleteOne($table, $id,$puth);
+        if ($result == FALSE) {
+            $this->session->set_flashdata('flash_message', 'Упс! Произошла ошибка');
+        } else {
+            $this->session->set_flashdata('success_message', 'Успешно удален!');
+
+        }
+        redirect(site_url() . 'admin/MainSections/allPartners');
     }
 
 }

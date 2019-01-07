@@ -14,7 +14,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="description" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="shortcut icon" type="img/png" href="<?=base_url()?>public/img/faIcon.png">
     <!--CSS-->
     <link rel="stylesheet" href="<?php echo base_url().'public/css/fontawesome-all.css' ?>">
     <link rel="stylesheet" href="<?php echo base_url().'public/css/bootstrap.min.css' ?>">

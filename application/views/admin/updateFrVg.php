@@ -9,7 +9,7 @@
     ?>
     <div class="form-group">
         <label for="">Введите название.Не больше 60 символов </label>
-        <input class="form-control" type="text" name="id" value="<?=$arr[0]->id?>">
+        <input class="form-control" type="hidden" name="id" value="<?=$arr[0]->id?>">
         <?php echo form_input(array('name'=>'name', 'id'=> 'name', 'placeholder'=>'Название', 'class'=>'form-control', 'value' => $arr[0]->name)); ?>
         <?php echo form_error('name');?>
     </div>

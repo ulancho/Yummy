@@ -31,9 +31,18 @@
         <div class="col-md-3">
             <div class="card-counter info">
                 <i class="fa fa-database"></i>
-                <span class="count-numbers">0</span>
+                <span class="count-numbers"><?=$news?></span>
                 <span class="count-name">Новости</span>
             </div>
         </div>
+        </a>
+        <a href="<?=base_url()?>admin/MainSections/allPartners">
+            <div class="col-md-3">
+                <div class="card-counter partners">
+                    <i class="fa fa-database"></i>
+                    <span class="count-numbers"><?=$partners?></span>
+                    <span class="count-name">Партнеры</span>
+                </div>
+            </div>
         </a>
 </div>

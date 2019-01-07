@@ -75,6 +75,8 @@ class Admin_page extends CI_Controller
         $data['box'] = $this->db->count_all('box');
         $data['fruits'] = $this->db->count_all('fruits');
         $data['vegetables'] = $this->db->count_all('vegetables');
+        $data['news'] = $this->db->count_all('news');
+        $data['partners'] = $this->db->count_all('partners');
         $arraydata = $this->session->userdata['login'];
         if (empty($arraydata)) {
             redirect(site_url() . 'admin/Admin_page/');

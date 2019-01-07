@@ -19,28 +19,14 @@
 <section class="partners">
     <div class="wrapper">
         <h2>Партнеры</h2>
-        <p>Компании, в которых наши сотрудники оперативно доставляют<br>
-            потенциальным партнерам доставку на дом, в офис, кафе, рестораны и сети магазинов.
+        <p>Мы работаем с нашими потенциальными партнерами уже много лет и поэтому за качество продукции даем 100% гарантию
         </p>
         <div class="partnersList regular flex">
+            <?php foreach ($partners as $rou):?>
             <div class="partnersItem">
-                <img src="<?=base_url()?>public/images/part1.jpg" alt="">
+                <img src="<?=base_url()?>public/images/partners/<?=$rou['img_name']?>" alt="<?=$rou['alt_name']?>">
             </div>
-            <div class="partnersItem">
-                <img src="<?=base_url()?>public/images/part2.jpg" alt="">
-            </div>
-            <div class="partnersItem">
-                <img src="<?=base_url()?>public/images/part3.jpg" alt="">
-            </div>
-            <div class="partnersItem">
-                <img src="<?=base_url()?>public/images/part1.jpg" alt="">
-            </div>
-            <div class="partnersItem">
-                <img src="<?=base_url()?>public/images/part2.jpg" alt="">
-            </div>
-            <div class="partnersItem">
-                <img src="<?=base_url()?>public/images/part3.jpg" alt="">
-            </div>
+            <?php endforeach;?>
         </div>
     </div>
 </section>
@@ -110,11 +96,11 @@
                 <img src="<?=base_url()?>public/img/logo.png" alt="">
             </div>
             <ul class="menuMob">
-                <li class="active"><a href="<?=base_url()?>">Главная</a></li>
-                <li><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
-                <li><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
-                <li><a href="<?=base_url()?>main/news">Новости</a></li>
-                <li><a href="<?=base_url()?>main/contacts">Контакты</a></li>
+                <li <?php if ($_SERVER['REQUEST_URI'] == '/' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>">Главная</a></li>
+                <li <?php if ($_SERVER['REQUEST_URI'] == '/main/fruits' ): ?> class="active" <?php endif; ?> ><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
+                <li <?php if ($_SERVER['REQUEST_URI'] == '/main/vegetables' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
+                <li <?php if ($_SERVER['REQUEST_URI'] == '/main/news' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>main/news">Новости</a></li>
+                <li <?php if ($_SERVER['REQUEST_URI'] == '/main/contacts' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>main/contacts">Контакты</a></li>
             </ul>
         </div>
     </div>

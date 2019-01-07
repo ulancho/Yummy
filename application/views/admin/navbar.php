@@ -20,11 +20,10 @@
                             <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-puzzle-piece" aria-hidden="true"></i>Разделы<span class="caret"></span></a>
                               <ul class="dropdown-menu">
-                                <li><a href="<?php echo site_url();?>admin/MainSections/sportpit">Спортивное питание</a></li>
-<!--                                <li><a href="--><?php //echo site_url();?><!--main/adduser">Добавление пользоавтелей</a></li>-->
-<!--                                <li><a href="--><?php //echo site_url();?><!--'main/banuser">Бан пользователей</a></li>-->
-<!--                                <li><a href="--><?php //echo site_url();?><!--main/changelevel">Роли</a></li>-->
-<!--                                <li><a href="--><?php //echo site_url();?><!--for_admin_time/index">Пользователи и время</a></li>-->
+                                <li><a href="<?php echo site_url();?>admin/MainSections/allBox">Подарочные коробки</a></li>
+                                <li><a href="<?php echo site_url();?>admin/MainSections/allFruits">Фрукты</a></li>
+                                <li><a href="<?php echo site_url();?>admin/MainSections/allVege">Овощи</a></li>
+                                <li><a href="<?php echo site_url();?>admin/MainSections/allNews">Новости</a></li>
                               </ul>
                             </li>
 

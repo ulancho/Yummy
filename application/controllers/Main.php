@@ -68,6 +68,8 @@ class Main extends CI_Controller {
         $cart['prodvg'] = $this->AdminModels->selectAllArray($table2);
 
         $footer['news'] = $this->AdminModels->newsfour();
+        $table3 = 'partners';
+        $footer['partners'] =$this->AdminModels->selectAllArray($table3);
 
         $this->load->view('main/header',$arr);
         $this->load->view('main/index',$data);
@@ -90,10 +92,15 @@ class Main extends CI_Controller {
         $data['bootstrap'] = $url."public/css/bootstrap.min.css";
         $data['noHomePage'] = 'noHomePage';
         $data['none'] = 'l';
+
+        $footer['news'] = $this->AdminModels->newsfour();
+        $table3 = 'partners';
+        $footer['partners'] =$this->AdminModels->selectAllArray($table3);
+
         $this->load->view('main/header',$data);
         $this->load->view('main/cart');
         $this->load->view('main/bugaga',$cart);
-        $this->load->view('main/footer');
+        $this->load->view('main/footer',$footer);
     }
     public function cart_proc(){
     $name = $this->input->post('name');
@@ -134,33 +141,38 @@ class Main extends CI_Controller {
 
         $table = 'fruits';
         $arr['prod'] = $this->AdminModels->selectAllArray($table);
-        $data['noHomePage'] = 'm';
+
+        $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = '';
         $arr['title'] = 'ФРУКТЫ';
         $data['none'] = 'l';
-        $footer['news'] =
+        $footer['news'] = $this->AdminModels->newsfour();
+        $table3 = 'partners';
+        $footer['partners'] =$this->AdminModels->selectAllArray($table3);
 
         $this->load->view('main/header',$data);
         $this->load->view('main/fruits',$arr);
         $this->load->view('main/bugaga',$cart);
-        $this->load->view('main/footer');
+        $this->load->view('main/footer',$footer);
     }
     public function vegetables(){
         $cart['box'] = $this->getBox();
         $table2 = 'fruits';
         $cart['prod'] = $this->AdminModels->selectAllArray($table2);
 
-
-        $data['noHomePage'] = 'm';
+        $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = '';
         $arr['title'] = 'ОВОЩИ';
         $data['none'] = 'l';
         $table = 'vegetables';
         $arr['prod'] = $this->AdminModels->selectAllArray($table);
+        $footer['news'] = $this->AdminModels->newsfour();
+        $table3 = 'partners';
+        $footer['partners'] =$this->AdminModels->selectAllArray($table3);
         $this->load->view('main/header',$data);
         $this->load->view('main/fruits',$arr);
         $this->load->view('main/bugaga',$cart);
-        $this->load->view('main/footer');
+        $this->load->view('main/footer',$footer);
     }
     public function news(){
         $config['base_url'] = base_url() . 'Main/news/';
@@ -186,9 +198,12 @@ class Main extends CI_Controller {
         $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = '';
         $data['none'] = 'none';
+        $table3 = 'partners';
+        $footer['partners'] =$this->AdminModels->selectAllArray($table3);
+        $footer['news'] = $this->AdminModels->newsfour();
         $this->load->view('main/header',$data);
         $this->load->view('main/news',$arr);
-        $this->load->view('main/footer');
+        $this->load->view('main/footer',$footer);
     }
     public function contacts(){
         $url = base_url();
@@ -234,11 +249,12 @@ class Main extends CI_Controller {
         $data['noHomePage'] = 'noHomePage';
         $data['bootstrap'] = '';
         $data['none'] = 'none';
+        $footer['news'] = $this->AdminModels->newsfour();
+        $table3 = 'partners';
+        $footer['partners'] =$this->AdminModels->selectAllArray($table3);
         $this->load->view('main/header',$data);
         $this->load->view('main/newsone',$arr);
-        $this->load->view('main/footer');
+        $this->load->view('main/footer',$footer);
     }
-
-
 
 }

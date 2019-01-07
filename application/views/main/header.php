@@ -27,11 +27,11 @@
             </div>
             <div class="headMenuSocLink clearfix">
                 <ul class="headMenu">
-                    <li class="active"><a href="<?=base_url()?>">Главная</a></li>
-                    <li ><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
-                    <li ><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
-                    <li ><a href="<?=base_url()?>main/news">Новости</a></li>
-                    <li ><a href="<?=base_url()?>main/contacts">Контакты</a></li>
+                    <li <?php if ( $_SERVER['REQUEST_URI'] == '/' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>">Главная</a></li>
+                    <li <?php if ( $_SERVER['REQUEST_URI'] == '/main/fruits' ): ?> class="active" <?php endif; ?> ><a href="<?=base_url()?>main/fruits">Фрукты</a></li>
+                    <li <?php if ( $_SERVER['REQUEST_URI'] == '/main/vegetables' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>main/vegetables">Овощи</a></li>
+                    <li <?php if ( $_SERVER['REQUEST_URI'] == '/main/news' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>main/news">Новости</a></li>
+                    <li <?php if ( $_SERVER['REQUEST_URI'] == '/main/contacts' ): ?> class="active" <?php endif; ?>><a href="<?=base_url()?>main/contacts">Контакты</a></li>
                 </ul>
                 <div class="headSocLink clearfix">
                     <ul>

@@ -183,6 +183,16 @@ class AdminModels extends CI_Model
         }
     }
 
+    public function addPartners($d){
+        $string = array(
+            'alt_name' => $d['name'],
+            'img_name' => $d['imgname'],
+        );
+        $this->db->insert('partners', $string);
+        return $this->db->insert_id();
+    }
+
+
     //Select ALL
     public function selectAll($table, $num = null, $offset = null)
     {
