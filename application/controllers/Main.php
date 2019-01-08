@@ -27,7 +27,7 @@ class Main extends CI_Controller {
         $config['validation'] = TRUE; // bool whether to validate email or not
         $this->email->initialize($config);
         $this->email->from('yummyfruitkg@gmail.com', 'Заявки из сайта');
-        $this->email->to('ulan.five@gmail.com');
+        $this->email->to('yummyfruit312kg@gmail.com');
 
         $this->email->subject('Заявка');
         if ($name=='' && $addres='' && $zakaz=''){
@@ -233,7 +233,7 @@ class Main extends CI_Controller {
         $config['validation'] = TRUE; // bool whether to validate email or not
         $this->email->initialize($config);
         $this->email->from('yummyfruitkg@gmail.com', 'Cообщение из сайта');
-        $this->email->to('ulan.five@gmail.com');
+        $this->email->to('yummyfruit312kg@gmail.com');
 
         $this->email->subject('Из сайта');
         $this->email->message('Телефон:' .$phone. '<br>ИМЯ:'.$name. '<br>Собщ:' .$comm);

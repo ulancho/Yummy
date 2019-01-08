@@ -72,7 +72,7 @@
             <p class="footerPhoneTitle">Наши контактные телефоны:</p>
             <div class="footerPhone clearfix">
                 <div class="footerPhoneCode">
-                    <span>0505</span>
+                    <span>0705</span>
                     <span>0507</span>
                     <span>0553</span>
                     <span>0773</span>
@@ -82,6 +82,16 @@
             <div class="footerPhoneEmail">
                 <p>Наш E-mail:</p>
                 <span>odzyna@mail.ru</span>
+            </div>
+            <div class="footerPhoneEmail clearfix">
+                <p>Мы в соц.сетях:</p>
+                <div class="headSocLink clearfix">
+                    <ul>
+                        <li class="Whats"><a href="https://api.whatsapp.com/send?phone=996505185555" target="blank_"></a></li>
+                        <li class="inst"><a href="https://www.instagram.com/yummy_fruit.kg/" target="blank_"></a></li>
+                        <li class="fb"><a href="#"></a></li>
+                    </ul>
+                </div>
             </div>
             <div class="copyriht">
                 <p>Все права зазищены © 2019г. <br>Сайт разработан: http://webformat.kg</p>

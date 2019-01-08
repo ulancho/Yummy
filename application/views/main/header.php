@@ -6,7 +6,7 @@
     <link rel="shortcut icon" type="img/png" href="<?=base_url()?>public/img/faIcon.png">
     <link rel="stylesheet" href="<?=base_url()?>public/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url()?>public/slick/slick-theme.css">
-    <link rel="stylesheet" href="<?=base_url()?>public/css/style.css?ver=0.0.7">
+    <link rel="stylesheet" href="<?=base_url()?>public/css/style.css?ver=0.0.8">
     <link rel="stylesheet" href="<?=base_url()?>public/css/pagination.css?">
     <link rel="stylesheet" href="<?=$bootstrap?>">
     <title>Yummy fruit</title>
@@ -19,7 +19,7 @@
             <div class="headContacts clearfix">
                 <div class="headContactsWrap">
                     <div class="HeadContactsCode">
-                        <span>+996 505</span>
+                        <span>+996 705</span>
                         <span>+996 553</span>
                     </div>
                     <div class="HeadContactsPhone">18 55 55</div>
@@ -35,7 +35,8 @@
                 </ul>
                 <div class="headSocLink clearfix">
                     <ul>
-                        <li class="inst"><a href="#"></a></li>
+                        <li class="Whats"><a href="https://api.whatsapp.com/send?phone=996505185555" target="blank_"></a></li>
+                        <li class="inst"><a href="https://www.instagram.com/yummy_fruit.kg/" target="blank_"></a></li>
                         <li class="fb"><a href="#"></a></li>
                     </ul>
                 </div>
